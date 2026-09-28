@@ -1,169 +1,169 @@
 {
   "kameralar": [
     {
+      "film": "35mm",
+      "yuva": "Nikon F",
       "model": "Nikon F50",
+      "aciklama": "Yeni başlayanlar için tasarlanmış giriş seviyesi SLR; hazır çekim programlarıyla kullanımı kolay.",
+      "tur": "SLR",
       "adet": 3,
-      "yil": "1994",
-      "tur": "SLR",
-      "film": "35mm",
-      "odak": "Otomatik",
-      "yuva": "Nikon F",
       "lensler": "Nikkor AF 35-70 (2), Nikkor AF 35-80",
-      "aciklama": "Yeni başlayanlar için tasarlanmış giriş seviyesi SLR; hazır çekim programlarıyla kullanımı kolay."
-    },
-    {
-      "model": "Nikon F60",
-      "adet": 2,
-      "yil": "1998",
-      "tur": "SLR",
-      "film": "35mm",
-      "odak": "Otomatik",
-      "yuva": "Nikon F",
-      "lensler": "Nikkor AF 35-80, bir gövde lenssiz",
-      "aciklama": "F50'nin halefi; döner kadranlı kullanımıyla daha pratik bir giriş seviyesi SLR."
-    },
-    {
-      "model": "Nikon F65",
-      "adet": 2,
-      "yil": "2001",
-      "tur": "SLR",
-      "film": "35mm",
-      "odak": "Otomatik",
-      "yuva": "Nikon F",
-      "lensler": "Nikkor AF 35-135, Nikkor AF 35-70",
-      "aciklama": "F60'ın halefi; kompakt ve hafif gövdesiyle gündelik çekim için rahat."
-    },
-    {
-      "model": "Nikon F70",
-      "adet": 1,
       "yil": "1994",
-      "tur": "SLR",
+      "odak": "Otomatik"
+    },
+    {
       "film": "35mm",
-      "odak": "Otomatik",
       "yuva": "Nikon F",
-      "lensler": "Nikkor AF 35-80",
-      "aciklama": "LCD panelli, menü tabanlı orta seviye SLR."
-    },
-    {
-      "model": "Nikon F75",
-      "adet": 1,
-      "yil": "2003",
+      "model": "Nikon F60",
+      "aciklama": "F50'nin halefi; döner kadranlı kullanımıyla daha pratik bir giriş seviyesi SLR.",
       "tur": "SLR",
-      "film": "35mm",
-      "odak": "Otomatik",
-      "yuva": "Nikon F",
-      "lensler": "Nikkor AF 35-80",
-      "aciklama": "Nikon'un son dönem film SLR'lerinden; çok hafif gövdesiyle öne çıkar."
-    },
-    {
-      "model": "Nikon F601",
-      "adet": 1,
-      "yil": "1990",
-      "tur": "SLR",
-      "film": "35mm",
-      "odak": "Otomatik",
-      "yuva": "Nikon F",
-      "lensler": "Nikkor 35-70",
-      "aciklama": "ABD'de N6006 adıyla satıldı; dahili flaş, motorlu film sarma ve matris ölçüm."
-    },
-    {
-      "model": "Canon EOS 1000F",
-      "adet": 1,
-      "yil": "1990",
-      "tur": "SLR",
-      "film": "35mm",
-      "odak": "Otomatik",
-      "yuva": "Canon EF",
-      "lensler": "Canon AF 35-80",
-      "aciklama": "EOS serisinin giriş modeli; dahili flaşlı ve hafif."
-    },
-    {
-      "model": "Canon EOS Rebel",
-      "adet": 1,
-      "yil": "1990'lar",
-      "tur": "SLR",
-      "film": "35mm",
-      "odak": "Otomatik",
-      "yuva": "Canon EF",
-      "lensler": "Canon AF 28-80",
-      "aciklama": "Canon'un giriş seviyesi film SLR serisi."
-    },
-    {
-      "model": "Canon EX",
-      "adet": 1,
-      "yil": "1970'ler",
-      "tur": "SLR",
-      "film": "35mm",
-      "odak": "Manuel",
-      "yuva": "Özel",
-      "lensler": "Canon 50mm",
-      "aciklama": "Lensin yalnızca ön grubunun değiştirilebildiği ilginç yapılı manuel SLR."
-    },
-    {
-      "model": "Kodak Ektar H35",
       "adet": 2,
-      "yil": "2022",
-      "tur": "Yarım kare kompakt",
+      "lensler": "Nikkor AF 35-80, bir gövde lenssiz",
+      "yil": "1998",
+      "odak": "Otomatik"
+    },
+    {
       "film": "35mm",
-      "odak": "Sabit odak",
+      "yuva": "Nikon F",
+      "model": "Nikon F65",
+      "aciklama": "F60'ın halefi; kompakt ve hafif gövdesiyle gündelik çekim için rahat.",
+      "tur": "SLR",
+      "adet": 3,
+      "lensler": "Nikkor AF 35-135, Nikkor AF 35-70",
+      "yil": "2001",
+      "odak": "Otomatik"
+    },
+    {
+      "film": "35mm",
+      "yuva": "Nikon F",
+      "model": "Nikon F70",
+      "aciklama": "LCD panelli, menü tabanlı orta seviye SLR.",
+      "tur": "SLR",
+      "adet": 1,
+      "lensler": "Nikkor AF 35-80",
+      "yil": "1994",
+      "odak": "Otomatik"
+    },
+    {
+      "film": "35mm",
+      "yuva": "Nikon F",
+      "model": "Nikon F75",
+      "aciklama": "Nikon'un son dönem film SLR'lerinden; çok hafif gövdesiyle öne çıkar.",
+      "tur": "SLR",
+      "adet": 1,
+      "lensler": "Nikkor AF 35-80",
+      "yil": "2003",
+      "odak": "Otomatik"
+    },
+    {
+      "film": "35mm",
+      "yuva": "Nikon F",
+      "model": "Nikon F601",
+      "aciklama": "ABD'de N6006 adıyla satıldı; dahili flaş, motorlu film sarma ve matris ölçüm.",
+      "tur": "SLR",
+      "adet": 1,
+      "lensler": "Nikkor 35-70",
+      "yil": "1990",
+      "odak": "Otomatik"
+    },
+    {
+      "film": "35mm",
+      "yuva": "Canon EF",
+      "model": "Canon EOS 1000F",
+      "aciklama": "EOS serisinin giriş modeli; dahili flaşlı ve hafif.",
+      "tur": "SLR",
+      "adet": 1,
+      "lensler": "Canon AF 35-80",
+      "yil": "1990",
+      "odak": "Otomatik"
+    },
+    {
+      "film": "35mm",
+      "yuva": "Canon EF",
+      "model": "Canon EOS Rebel",
+      "aciklama": "Canon'un giriş seviyesi film SLR serisi.",
+      "tur": "SLR",
+      "adet": 1,
+      "lensler": "Canon AF 28-80",
+      "yil": "1990'lar",
+      "odak": "Otomatik"
+    },
+    {
+      "film": "35mm",
+      "yuva": "Özel",
+      "model": "Canon EX",
+      "aciklama": "Lensin yalnızca ön grubunun değiştirilebildiği ilginç yapılı manuel SLR.",
+      "tur": "SLR",
+      "adet": 1,
+      "lensler": "Canon 50mm",
+      "yil": "1970'ler",
+      "odak": "Manuel"
+    },
+    {
+      "film": "35mm",
       "yuva": "Sabit 22mm lens",
+      "model": "Kodak Ektar H35",
+      "aciklama": "Yarım kare (half-frame) çeken kompakt kamera; 36 pozluk bir filmden 72 kare çıkarır, dahili flaşlıdır.",
+      "tur": "Yarım kare kompakt",
+      "adet": 2,
       "lensler": "Sabit lens",
-      "aciklama": "Yarım kare (half-frame) çeken kompakt kamera; 36 pozluk bir filmden 72 kare çıkarır, dahili flaşlıdır."
+      "yil": "2022",
+      "odak": "Sabit odak"
     },
     {
-      "model": "Kodak EC35",
-      "adet": 1,
-      "yil": "–",
-      "tur": "Kompakt",
       "film": "35mm",
-      "odak": "–",
       "yuva": "Sabit lens",
+      "model": "Kodak EC35",
+      "aciklama": "Kodak markalı 35mm kompakt kamera.",
+      "tur": "Kompakt",
+      "adet": 1,
       "lensler": "Sabit lens",
-      "aciklama": "Kodak markalı 35mm kompakt kamera."
+      "yil": "–",
+      "odak": "–"
     },
     {
-      "model": "Minolta X300",
-      "adet": 1,
-      "yil": "1984",
-      "tur": "SLR",
       "film": "35mm",
-      "odak": "Manuel",
       "yuva": "Minolta MD",
+      "model": "Minolta X300",
+      "aciklama": "Diyafram öncelikli otomatik pozlamalı, dayanıklı manuel SLR.",
+      "tur": "SLR",
+      "adet": 1,
       "lensler": "28-70",
-      "aciklama": "Diyafram öncelikli otomatik pozlamalı, dayanıklı manuel SLR."
+      "yil": "1984",
+      "odak": "Manuel"
     },
     {
+      "film": "35mm",
+      "yuva": "–",
       "model": "Revueflex SC2",
-      "adet": 1,
-      "yil": "–",
+      "aciklama": "Alman Foto Quelle mağazalarının kendi markasıyla satılan manuel SLR.",
       "tur": "SLR",
-      "film": "35mm",
-      "odak": "Manuel",
-      "yuva": "–",
+      "adet": 1,
       "lensler": "Sigma 35-70",
-      "aciklama": "Alman Foto Quelle mağazalarının kendi markasıyla satılan manuel SLR."
-    },
-    {
-      "model": "Vivitar V300N",
-      "adet": 1,
       "yil": "–",
-      "tur": "SLR",
-      "film": "35mm",
-      "odak": "Manuel",
-      "yuva": "–",
-      "lensler": "Vivitar 28-70",
-      "aciklama": "Vivitar markalı manuel odaklı SLR."
+      "odak": "Manuel"
     },
     {
-      "model": "Yashica Mat 124G",
+      "film": "35mm",
+      "yuva": "–",
+      "model": "Vivitar V300N",
+      "aciklama": "Vivitar markalı manuel odaklı SLR.",
+      "tur": "SLR",
       "adet": 1,
-      "yil": "1970",
-      "tur": "Çift lensli (TLR)",
+      "lensler": "Vivitar 28-70",
+      "yil": "–",
+      "odak": "Manuel"
+    },
+    {
       "film": "120",
-      "odak": "Manuel",
       "yuva": "Sabit 80mm lens",
+      "model": "Yashica Mat 124G",
+      "aciklama": "Orta format filme kare kareler çeken klasik çift lensli kamera.",
+      "tur": "Çift lensli (TLR)",
+      "adet": 1,
       "lensler": "Sabit lens",
-      "aciklama": "Orta format filme kare kareler çeken klasik çift lensli kamera."
+      "yil": "1970",
+      "odak": "Manuel"
     }
   ],
   "kitaplar": [
