@@ -1,0 +1,223 @@
+# ─────────────────────────────────────────────────────────────
+# EFOT yönetim paneli (Decap CMS) ayarları
+# Kurulumda yalnızca aşağıdaki "repo" satırını kendi GitHub
+# kullanıcı adınız ve depo adınızla değiştirmeniz gerekir.
+# ─────────────────────────────────────────────────────────────
+backend:
+  name: github
+  repo: GITHUB-KULLANICI-ADI/efot-site   # ← örn. efotege/efot-site
+  branch: main
+  commit_messages:
+    update: "{{collection}} güncellendi"
+    uploadMedia: "Görsel yüklendi: {{path}}"
+    deleteMedia: "Görsel silindi: {{path}}"
+
+locale: tr
+site_url: /
+logo_url: /images/logo.png
+
+media_folder: images/uploads
+public_folder: /images/uploads
+
+collections:
+  - name: icerik
+    label: Site İçeriği
+    editor:
+      preview: false
+    files:
+
+      # ── DUYURULAR ───────────────────────────────────────────
+      - name: duyurular
+        label: Duyurular
+        file: content/duyurular.json
+        fields:
+          - name: duyurular
+            label: Duyurular
+            label_singular: Duyuru
+            widget: list
+            hint: En yeni duyuruyu en üste taşıyın. Eskiyen duyuruları silebilirsiniz.
+            summary: "{{fields.tarih}} — {{fields.baslik}}"
+            fields:
+              - { name: tarih, label: Tarih, widget: string, hint: "Örn. 3 Ekim 2026 veya 6–8 Ekim 2026" }
+              - { name: gun, label: Gün, widget: string, required: false, hint: "Örn. Cumartesi" }
+              - { name: baslik, label: Başlık, widget: string }
+              - { name: metin, label: Açıklama, widget: text }
+              - { name: bilgi, label: "Saat / yer / kayıt bilgisi", widget: string, required: false, hint: "Örn. Saat: 17.00 · Yer: MÖTBE Kültür Merkezi" }
+
+      # ── SERGİLER ────────────────────────────────────────────
+      - name: sergiler
+        label: Sergiler
+        file: content/sergiler.json
+        fields:
+          - name: sergiler
+            label: Sergiler
+            label_singular: Sergi
+            widget: list
+            hint: Sergiler sitede bu sırayla görünür; en yeni sergiyi en üste taşıyın.
+            summary: "{{fields.ad}} ({{fields.yil}})"
+            collapsed: true
+            fields:
+              - { name: ad, label: Sergi adı, widget: string }
+              - { name: yil, label: Yıl, widget: string, hint: "Sergi kartında görünür. Örn. 2025 veya 2022-2023" }
+              - { name: tarih_yer, label: Tarih ve yer, widget: string, required: false, hint: "Örn. 21 Mayıs – 4 Haziran 2025 · Prof. Dr. Yusuf Vardar MÖTBE Kültür Merkezi" }
+              - { name: afis, label: Afiş, widget: image, required: false }
+              - { name: ayrac_on, label: Kitap ayracı (ön yüz), widget: image, required: false }
+              - { name: ayrac_arka, label: Kitap ayracı (arka yüz), widget: image, required: false }
+              - name: yazi
+                label: Sergi yazısı
+                label_singular: Paragraf
+                widget: list
+                required: false
+                hint: Her paragrafı ayrı ekleyin. Paragrafın bir başlığı varsa (örn. Renk, Işık) başlık alanına yazın; yoksa boş bırakın.
+                summary: "{{fields.baslik}} {{fields.metin}}"
+                fields:
+                  - { name: baslik, label: Paragraf başlığı, widget: string, required: false }
+                  - { name: metin, label: Metin, widget: text }
+              - name: katilimcilar
+                label: Katılımcılar
+                label_singular: Katılımcı
+                widget: list
+                required: false
+                hint: Alfabetik sırayla ekleyin.
+                field: { name: ad, label: Ad Soyad, widget: string }
+              - name: eserler
+                label: Sergi fotoğrafları
+                label_singular: Fotoğraf
+                widget: list
+                required: false
+                summary: "{{fields.fotografci}}"
+                fields:
+                  - { name: foto, label: Fotoğraf, widget: image }
+                  - { name: fotografci, label: Fotoğrafçı, widget: string, hint: "Fotoğrafın altında görünür" }
+              - name: acilis
+                label: Açılış günü fotoğrafları
+                label_singular: Fotoğraf
+                widget: list
+                required: false
+                field: { name: foto, label: Fotoğraf, widget: image }
+
+      # ── PORTFOLYO ───────────────────────────────────────────
+      - name: portfolyo
+        label: Portfolyo
+        file: content/portfolyo.json
+        fields:
+          - name: uyeler
+            label: Üyeler
+            label_singular: Üye
+            widget: list
+            summary: "{{fields.ad}}"
+            collapsed: true
+            fields:
+              - { name: ad, label: Ad, widget: string }
+              - name: fotograflar
+                label: Fotoğraflar
+                label_singular: Fotoğraf
+                widget: list
+                required: false
+                hint: İlk fotoğraf, üyenin kapak fotoğrafı olarak kullanılır.
+                field: { name: foto, label: Fotoğraf, widget: image }
+
+      # ── ANASAYFA ────────────────────────────────────────────
+      - name: anasayfa
+        label: Anasayfa arka planı
+        file: content/anasayfa.json
+        fields:
+          - name: arka_plan_fotograflari
+            label: Arka plan fotoğrafları
+            label_singular: Fotoğraf
+            widget: list
+            hint: Anasayfanın üst kısmında sırayla (30 saniyede bir) değişen fotoğraflar. Yatay fotoğraflar en iyi sonucu verir.
+            field: { name: foto, label: Fotoğraf, widget: image }
+
+      # ── ETKİNLİKLER ─────────────────────────────────────────
+      - name: etkinlikler
+        label: Etkinlikler (Ne Yapıyoruz?)
+        file: content/etkinlikler.json
+        fields:
+          - name: gruplar
+            label: Etkinlik türleri
+            label_singular: Etkinlik türü
+            widget: list
+            summary: "{{fields.baslik}}"
+            collapsed: true
+            fields:
+              - { name: baslik, label: Başlık, widget: string, hint: "Örn. Eğitimler, Atölyeler" }
+              - { name: giris, label: Kısa açıklama, widget: text, required: false }
+              - name: ogeler
+                label: Alt başlıklar
+                label_singular: Alt başlık
+                widget: list
+                summary: "{{fields.baslik}}"
+                fields:
+                  - { name: etiket, label: Etiket, widget: string, hint: "Soldaki küçük etiket. Örn. Başlangıç, Analog" }
+                  - { name: baslik, label: Başlık, widget: string }
+                  - { name: aciklama, label: Açıklama, widget: text, required: false }
+
+      # ── BÜLTEN ──────────────────────────────────────────────
+      - name: bulten
+        label: Bülten
+        file: content/bulten.json
+        fields:
+          - name: sayilar
+            label: Bülten sayıları
+            label_singular: Sayı
+            widget: list
+            hint: En yeni sayıyı en üste taşıyın.
+            summary: "{{fields.tarih}} — {{fields.baslik}}"
+            fields:
+              - { name: tarih, label: Ay / yıl, widget: string, hint: "Örn. Eylül 2026" }
+              - { name: baslik, label: Başlık, widget: string }
+              - { name: editorler, label: Editörler, widget: string, required: false, hint: "Virgülle ayırın" }
+              - { name: katkida_bulunanlar, label: Katkıda bulunanlar, widget: string, required: false, hint: "Virgülle ayırın" }
+              - { name: ozet, label: Kısa özet, widget: text, required: false }
+              - { name: link, label: Substack linki, widget: string, required: false }
+
+      # ── DERGİLER ────────────────────────────────────────────
+      - name: dergiler
+        label: Dergiler
+        file: content/dergiler.json
+        fields:
+          - name: dergiler
+            label: Dergiler
+            label_singular: Dergi
+            widget: list
+            hint: En yeni dergiyi en üste taşıyın.
+            summary: "{{fields.donem}} — {{fields.ad}}"
+            fields:
+              - { name: donem, label: Dönem, widget: string, hint: "Örn. 2024–2025" }
+              - { name: ad, label: Dergi adı, widget: string }
+              - { name: yer, label: Konu / yer, widget: string, required: false }
+              - { name: kapak, label: Kapak görseli, widget: image, required: false }
+              - { name: link, label: Online dergi linki, widget: string, required: false }
+
+      # ── ENVANTER ────────────────────────────────────────────
+      - name: envanter
+        label: Envanter
+        file: content/envanter.json
+        fields:
+          - name: kameralar
+            label: Film kameralar
+            label_singular: Kamera
+            widget: list
+            summary: "{{fields.model}} ({{fields.adet}} adet)"
+            collapsed: true
+            fields:
+              - { name: model, label: Model, widget: string }
+              - { name: adet, label: Adet, widget: number, value_type: int, min: 1, default: 1 }
+              - { name: yil, label: Çıkış yılı, widget: string, required: false }
+              - { name: tur, label: Tür, widget: string, required: false, hint: "Örn. SLR, Kompakt" }
+              - { name: film, label: Film, widget: string, default: 35mm, hint: "Örn. 35mm, 120" }
+              - { name: odak, label: Odaklama, widget: string, required: false }
+              - { name: yuva, label: Lens yuvası, widget: string, required: false }
+              - { name: lensler, label: Envanterdeki lensler, widget: string, required: false }
+              - { name: aciklama, label: Kısa açıklama, widget: text, required: false }
+          - name: kitaplar
+            label: Kitaplar
+            label_singular: Kitap
+            widget: list
+            required: false
+            summary: "{{fields.baslik}}"
+            fields:
+              - { name: etiket, label: Tür, widget: string, hint: "Örn. Fotoğraf Kitabı, Teori" }
+              - { name: baslik, label: Kitap adı — yazar, widget: string }
+              - { name: not, label: Kısa not, widget: string, required: false }

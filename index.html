@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ege Fotoğraf Topluluğu</title>
+<meta name="description" content="Ege Üniversitesi Fotoğraf Topluluğu (EFOT) — 1985’ten beri fotoğrafı sevdirmek ve yaygınlaştırmak için bir aradayız.">
+<link rel="icon" href="/images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f4efe4;
+    --paper-2:#ece3d1;
+    --card:#fbf8f1;
+    --ink:#221f1a;
+    --ink-dim:#69624f;
+    --line:#dcd0b4;
+    --accent:#b4791c;
+    --accent-2:#7e5314;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    line-height:1.6;
+    padding-top:env(safe-area-inset-top,0px);
+    padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  a{color:inherit;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:1100px; margin:0 auto; padding:0 24px;}
+  @media (max-width:700px){
+    .wrap{padding:0 36px;}
+  }
+
+  /* NAV */
+  nav{
+    position:sticky; top:0; z-index:100;
+    background:rgba(244,239,228,.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+    padding-top:env(safe-area-inset-top,0px);
+  }
+  nav .wrap{display:flex; align-items:center; justify-content:space-between; height:64px;}
+  .brand{display:flex; align-items:center; background:none; border:none; cursor:pointer; padding:0;}
+  .brand img{height:38px; width:auto; display:block;}
+  .navlinks{display:flex; gap:8px; list-style:none; margin:0; padding:0;}
+  .navlinks button{
+    font-family:inherit; font-size:.94rem; background:none; border:none; cursor:pointer;
+    color:var(--ink-dim); padding:8px 14px; border-radius:3px; transition:background .15s, color .15s;
+  }
+  .navlinks button:hover{color:var(--ink);}
+  .navlinks button.active{color:var(--ink); background:var(--paper-2);}
+  .navtoggle{display:none; background:none; border:none; color:var(--ink); font-size:1.5rem; cursor:pointer;}
+
+  /* ARŞİV DROPDOWN */
+  .has-sub{position:relative;}
+  .sub-toggle{display:inline-flex; align-items:center; gap:4px;}
+  .sub-toggle .caret{font-size:.7em; transition:transform .15s;}
+  .has-sub.open .sub-toggle .caret{transform:rotate(180deg);}
+  .submenu{
+    list-style:none; margin:0; padding:12px 6px 6px; display:none;
+    position:absolute; top:100%; left:0; min-width:170px;
+    background:var(--card); border:1px solid var(--line); border-radius:3px;
+    box-shadow:0 6px 18px rgba(0,0,0,.08); z-index:110;
+  }
+  .has-sub.open .submenu{display:block;}
+  @media (hover:hover) and (pointer:fine){
+    .has-sub:hover .submenu{display:block;}
+    .has-sub:hover .sub-toggle .caret{transform:rotate(180deg);}
+  }
+  .submenu li{border:none !important;}
+  .submenu button{width:100%; text-align:left; padding:9px 12px; border-radius:2px; font-size:.9rem;}
+  .submenu button:hover{background:var(--paper-2);}
+  @media (max-width:760px){
+    .submenu{
+      position:static; display:none; box-shadow:none; border:none; background:none;
+      padding:0 0 0 24px; margin:0;
+    }
+    .has-sub.open .submenu{display:block;}
+    .submenu li{border-top:1px solid var(--line) !important;}
+    .submenu button{padding:14px 24px 14px 0;}
+  }
+  @media (max-width:760px){
+    .navlinks{position:fixed; top:64px; left:0; right:0; background:var(--paper); flex-direction:column; gap:0; border-bottom:1px solid var(--line); max-height:0; overflow:hidden; transition:max-height .25s ease;}
+    .navlinks.open{max-height:400px;}
+    .navlinks li{border-top:1px solid var(--line);}
+    .navlinks button{display:block; width:100%; text-align:left; padding:16px 36px; border-radius:0;}
+    .navtoggle{display:block;}
+  }
+
+  .view{display:none;}
+  .view.active{display:block;}
+
+  /* HERO */
+  header.hero{padding:64px 0 0; position:relative; overflow:hidden;}
+  .hero-bg{
+    position:absolute; inset:0; background-size:cover; background-position:center;
+    opacity:0; transition:opacity 2s ease;
+  }
+  .hero-bg.active{opacity:1;}
+  .hero-scrim{
+    position:absolute; inset:0;
+    background:linear-gradient(to right,
+      rgba(244,239,228,.97) 0%,
+      rgba(244,239,228,.9) 30%,
+      rgba(244,239,228,.55) 60%,
+      rgba(244,239,228,.15) 85%,
+      rgba(244,239,228,0) 100%);
+  }
+  .hero .wrap{position:relative; z-index:1;}
+  .eyebrow-photo{font-family:'Fraunces',serif; font-style:italic; font-size:.85rem; color:var(--ink-dim); opacity:.75; margin-bottom:10px;}
+  h1.title{
+    font-family:'Fraunces',serif; font-weight:600;
+    font-size:clamp(2.3rem, 6vw, 4rem);
+    line-height:1.05; margin:0 0 20px; max-width:none;
+  }
+  .hero p.lead{max-width:50%; font-size:1.1rem; font-weight:500; color:var(--ink-dim); margin:0; padding-bottom:72px;}
+  @media (max-width:700px){ .hero p.lead{max-width:100%;} }
+  .btnrow{display:flex; gap:14px; flex-wrap:wrap; margin-bottom:44px;}
+  .btn{
+    display:inline-block; padding:12px 24px; border-radius:2px; text-decoration:none;
+    font-size:.95rem; font-weight:500; border:1px solid var(--line); background:none; cursor:pointer;
+    font-family:inherit; color:var(--ink); transition:border-color .15s, background .15s;
+  }
+  .btn.primary{background:var(--accent); border-color:var(--accent); color:#fbf6ea;}
+  .btn.primary:hover{background:var(--accent-2); border-color:var(--accent-2);}
+  .btn.ghost:hover{border-color:var(--ink-dim);}
+
+  section{padding:48px 0 76px;}
+  h2.h2{font-family:'Fraunces',serif; font-weight:600; font-size:clamp(1.7rem,4vw,2.3rem); margin:0 0 30px;}
+
+  /* ABOUT */
+  .about-grid{display:grid; grid-template-columns:1.1fr .9fr; gap:72px; align-items:start;}
+  .about-grid p{color:var(--ink-dim); margin:0 0 16px; line-height:1.75;}
+  .about-grid p.about-lead{font-size:1.15rem; color:var(--ink); line-height:1.65; font-weight:400;}
+  .about-facts{display:flex; gap:40px; margin-left:auto; text-align:right;}
+  .about-facts strong{display:block; font-size:1.9rem; font-weight:600; color:var(--ink); letter-spacing:-.01em; line-height:1.1;}
+  .about-facts span{font-size:.82rem; color:var(--ink-dim);}
+  .about-grid p.about-label{font-size:.75rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--accent-2); margin:14px 0 18px; line-height:1.4;}
+  .about-aims{list-style:none; margin:0; padding:0; counter-reset:aim;}
+  .about-aims li{
+    counter-increment:aim; display:grid; grid-template-columns:34px 1fr; gap:10px;
+    padding:15px 0; border-top:1px solid var(--line); color:var(--ink); font-size:.95rem; line-height:1.55;
+  }
+  .about-aims li:last-child{border-bottom:1px solid var(--line);}
+  .about-aims li::before{content:counter(aim, decimal-leading-zero); color:var(--accent); font-size:.8rem; font-weight:600; padding-top:3px; font-variant-numeric:tabular-nums;}
+  .about-advisor{margin-top:48px; padding-top:24px; border-top:1px solid var(--line); display:flex; flex-wrap:wrap; align-items:center; gap:10px 18px;}
+  .about-advisor p{margin:0;}
+  .about-advisor-label{font-size:.75rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--accent-2); min-width:170px;}
+  .about-advisor-name{font-size:1.05rem; font-weight:600;}
+  .about-advisor-name a{color:var(--ink); text-decoration:none; border-bottom:1px solid var(--accent); transition:color .15s, border-color .15s;}
+  .about-advisor-name a:hover{color:var(--accent-2); border-color:var(--accent-2);}
+  .about-advisor-name span{font-size:.8em; font-weight:400;}
+  .about-advisor-role{font-size:.9rem; color:var(--ink-dim);}
+  @media (max-width:800px){ .about-grid{grid-template-columns:1fr; gap:44px;} .about-facts{margin-left:0; text-align:left; width:100%; margin-top:10px;} }
+
+  /* CARD GRID (etkinlikler) */
+  .grid4{display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line); border:1px solid var(--line);}
+  .grid4 .card{background:var(--card); padding:30px 24px;}
+  .card .num{font-family:'Fraunces',serif; font-style:italic; color:var(--accent); font-size:.95rem; margin-bottom:12px; display:block;}
+  .card h3{font-family:'Fraunces',serif; font-weight:600; font-size:1.15rem; margin:0 0 8px;}
+  .card p{color:var(--ink-dim); font-size:.93rem; margin:0;}
+  @media (max-width:800px){ .grid4{grid-template-columns:1fr 1fr;} }
+  @media (max-width:480px){ .grid4{grid-template-columns:1fr;} }
+
+  .page-head{padding:52px 0 8px;}
+  .page-head p{color:var(--ink-dim); max-width:56ch; margin:0 0 20px;}
+
+  /* DUYURULAR */
+  .duyuru-band{
+    background:var(--paper-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+    padding:64px 0 72px; margin:24px 0 56px;
+  }
+  .duyuru-head{display:flex; flex-direction:column; gap:6px; margin-bottom:28px;}
+  .duyuru-head .h2{margin:0;}
+  .duyuru-label{margin:0; font-size:.75rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--accent-2);}
+  .duyuru-band .duyuru-list{display:flex; flex-direction:column; gap:14px;}
+  .duyuru-band .duyuru-list li{
+    background:var(--card); border:1px solid var(--line); border-left:3px solid var(--accent);
+    border-radius:3px; padding:24px 26px; gap:28px;
+  }
+  .duyuru-band .duyuru-list li:last-child{border-bottom:1px solid var(--line);}
+  .duyuru-band .duyuru-date{font-family:'Inter',sans-serif; font-style:normal; font-weight:600; color:var(--ink); font-size:.92rem; line-height:1.5; min-width:150px;}
+  @media (max-width:600px){ .duyuru-band{padding:48px 0 56px;} .duyuru-band .duyuru-list li{padding:20px;} }
+  .duyuru-list{list-style:none; margin:0; padding:0;}
+  .duyuru-list li{display:flex; gap:24px; padding:22px 0; border-top:1px solid var(--line); flex-wrap:wrap;}
+  .duyuru-list li:last-child{border-bottom:1px solid var(--line);}
+  .duyuru-date{font-family:'Fraunces',serif; font-style:italic; color:var(--ink-dim); min-width:120px; font-size:.95rem;}
+  .duyuru-text h4{margin:0 0 6px; font-size:1.05rem; font-weight:600;}
+  .duyuru-text{flex:1; min-width:240px;}
+  .duyuru-text p{margin:0; color:var(--ink-dim); font-size:.94rem; max-width:62ch;}
+  .duyuru-text p.duyuru-meta{margin-top:10px; font-size:.85rem; color:var(--accent-2);}
+
+  /* BÜLTEN / DERGİLER */
+  .bulten-list, .dergi-list{list-style:none; margin:0; padding:0;}
+  .bulten-list li, .dergi-list li{display:flex; gap:28px; padding:30px 0; border-top:1px solid var(--line); flex-wrap:wrap; align-items:baseline;}
+  .bulten-list li:last-child, .dergi-list li:last-child{border-bottom:1px solid var(--line);}
+  .bulten-date, .dergi-date{font-family:'Fraunces',serif; font-style:italic; color:var(--ink-dim); min-width:120px; font-size:.95rem;}
+  .bulten-text, .dergi-text{flex:1; min-width:240px;}
+  .bulten-text h4, .dergi-text h4{margin:0 0 8px; font-size:1.18rem; font-weight:600; font-family:'Fraunces',serif;}
+  .bulten-text .editors{margin:0 0 4px; font-size:.85rem; color:var(--accent-2); letter-spacing:.01em;}
+  .bulten-text .contributors{margin:0 0 12px; font-size:.85rem; color:var(--ink-dim); letter-spacing:.01em;}
+  .bulten-text p.summary, .dergi-text p.summary{margin:0 0 14px; color:var(--ink-dim); font-size:.94rem; max-width:62ch;}
+  .dergi-list li{display:grid; grid-template-columns:120px 200px 1fr; gap:28px; align-items:start;}
+  .dergi-cover{display:block; border:1px solid var(--line); background:var(--card); box-shadow:0 2px 8px rgba(0,0,0,.08); overflow:hidden;}
+  .dergi-cover img{width:100%; height:auto; display:block; transition:transform .25s ease;}
+  .dergi-cover:hover img{transform:scale(1.03);}
+  .dergi-text p.dergi-place{margin:0 0 14px; color:var(--ink-dim); font-size:.92rem;}
+  @media (max-width:700px){
+    .dergi-list li{grid-template-columns:1fr; gap:14px;}
+    .dergi-cover{max-width:320px;}
+  }
+  .bulten-link, .dergi-link{
+    display:inline-flex; align-items:center; gap:6px; font-size:.9rem; font-weight:500;
+    color:var(--ink); border-bottom:1px solid var(--accent); text-decoration:none; padding-bottom:1px;
+  }
+  .bulten-link:hover, .dergi-link:hover{color:var(--accent-2); border-color:var(--accent-2);}
+
+  /* ENVANTER */
+  .envanter-group{margin-bottom:56px;}
+  .envanter-group:last-child{margin-bottom:0;}
+  .envanter-group h3{font-family:'Fraunces',serif; font-weight:600; font-size:1.3rem; margin:0 0 18px;}
+  .envanter-list{list-style:none; margin:0; padding:0;}
+  .envanter-list li{display:flex; gap:24px; padding:20px 0; border-top:1px solid var(--line); flex-wrap:wrap; align-items:baseline;}
+  .envanter-list li:last-child{border-bottom:1px solid var(--line);}
+  .envanter-tag{font-family:'Fraunces',serif; font-style:italic; color:var(--accent-2); min-width:120px; font-size:.92rem;}
+  .envanter-text{flex:1; min-width:220px;}
+  .envanter-text h4{margin:0; font-size:1.05rem; font-weight:600;}
+  .envanter-text p{margin:0; color:var(--ink-dim); font-size:.9rem;}
+
+  /* ETKİNLİKLER */
+  .etkinlik-group{border-top:1px solid var(--line);}
+  .etkinlik-group:last-of-type{border-bottom:1px solid var(--line);}
+  .etkinlik-head{
+    display:flex; align-items:center; justify-content:space-between; gap:14px;
+    padding:22px 0; cursor:pointer; list-style:none; user-select:none;
+  }
+  .etkinlik-head::-webkit-details-marker{display:none;}
+  .etkinlik-head::marker{content:"";}
+  .etkinlik-head h3{font-family:'Fraunces',serif; font-weight:600; font-size:1.4rem; margin:0; transition:color .15s;}
+  .etkinlik-head:hover h3{color:var(--accent-2);}
+  .etkinlik-caret{
+    width:9px; height:9px; flex:0 0 auto; margin-right:6px;
+    border-right:1.6px solid var(--ink-dim); border-bottom:1.6px solid var(--ink-dim);
+    transform:rotate(45deg) translateY(-3px); transition:transform .2s ease;
+  }
+  .etkinlik-group[open] .etkinlik-caret{transform:rotate(-135deg) translateY(-2px);}
+  .etkinlik-body{padding:0 0 28px;}
+  .etkinlik-intro{color:var(--ink-dim); margin:0 0 16px; max-width:62ch;}
+  .etkinlik-group .envanter-text h4{margin:0 0 4px;}
+  .etkinlik-group .envanter-list li:last-child{border-bottom:none;}
+
+  /* ENVANTER — KAMERALAR */
+  .envanter-list li.kamera-item{display:block; padding:0;}
+  .kamera-item summary{display:flex; gap:24px; padding:20px 0; flex-wrap:wrap; align-items:baseline; cursor:pointer; list-style:none;}
+  .kamera-item summary::-webkit-details-marker{display:none;}
+  .kamera-item summary::marker{content:"";}
+  .kamera-item summary:hover h4{color:var(--accent-2);}
+  .kamera-item summary:focus-visible{outline:2px solid var(--accent); outline-offset:4px;}
+  .kamera-item h4{transition:color .15s;}
+  .kamera-item .etkinlik-caret{align-self:center;}
+  .kamera-item details[open] .etkinlik-caret{transform:rotate(-135deg) translateY(-2px);}
+  .envanter-count{display:inline-block; font-family:'Inter',sans-serif; font-size:.78rem; font-weight:500; color:var(--accent-2); background:var(--paper-2); border:1px solid var(--line); padding:1px 10px; border-radius:999px; margin-left:10px; vertical-align:2px;}
+  .kamera-detail{padding:0 0 24px 144px;}
+  .kamera-specs{display:grid; grid-template-columns:repeat(auto-fill,minmax(170px,1fr)); gap:14px 28px; margin:0;}
+  .kamera-specs dt{font-size:.78rem; color:var(--ink-dim); margin:0;}
+  .kamera-specs dd{margin:2px 0 0; font-size:.95rem;}
+  .envanter-summary{color:var(--ink-dim); font-size:.9rem; margin:-8px 0 18px;}
+  @media (max-width:640px){ .kamera-detail{padding-left:0;} }
+
+  /* SERGİLER */
+  .sergi-list{
+    display:grid; grid-template-columns:repeat(auto-fill, minmax(170px, 1fr));
+    gap:36px 28px; width:100%;
+  }
+  .sergi-card{cursor:pointer; text-align:center; background:none; border:none; padding:0; font-family:inherit;}
+  .sergi-card .poster-cover{
+    width:100%; aspect-ratio:1/1.414; overflow:hidden; background:var(--card);
+    border:1px solid var(--line); margin-bottom:12px;
+  }
+  .sergi-card .poster-cover img{width:100%; height:100%; object-fit:cover; object-position:top;}
+  .sergi-card:hover .poster-cover img{transform:scale(1.02);}
+  .sergi-card .poster-cover img{transition:transform .2s;}
+  .sergi-card h3{font-family:'Fraunces',serif; font-weight:600; font-size:1.05rem; margin:0 0 4px; color:var(--ink);}
+  .sergi-card .sergi-card-date{font-family:'Fraunces',serif; font-style:italic; font-size:.85rem; color:var(--ink-dim); margin:0;}
+
+  .sergi-item{padding-bottom:60px; margin-bottom:60px; border-bottom:1px solid var(--line);}
+  .sergi-item:last-child{border-bottom:none; margin-bottom:0; padding-bottom:0;}
+  .sergi-date{font-family:'Fraunces',serif; font-style:italic; color:var(--ink-dim); font-size:.95rem; margin-bottom:6px;}
+  .sergi-item h3, #sergi-detail-title{font-family:'Fraunces',serif; font-weight:600; font-size:1.6rem; margin:0 0 28px;}
+  .sergi-body{display:grid; grid-template-columns:300px 1fr; gap:48px; margin-bottom:48px; align-items:start;}
+  .sergi-media{display:flex; flex-direction:column; gap:32px;}
+  .poster-placeholder{
+    aspect-ratio:1/1.414; border:1px dashed var(--line); background:var(--card);
+    display:flex; align-items:center; justify-content:center; text-align:center;
+    font-family:'Fraunces',serif; font-style:italic; color:var(--ink-dim); font-size:.85rem; padding:16px;
+  }
+  .sergi-poster button{display:block; width:100%; padding:0; border:none; background:none; cursor:zoom-in;}
+  .sergi-poster img{width:100%; aspect-ratio:1/1.414; object-fit:cover; display:block; border-radius:4px; box-shadow:0 4px 14px rgba(0,0,0,.14); transition:transform .2s ease;}
+  .sergi-poster button:hover img{transform:translateY(-3px);}
+  .sergi-desc{margin:0 0 32px; max-width:62ch;}
+  .sergi-desc p{color:var(--ink-dim); margin:0 0 16px; line-height:1.8;}
+  .sergi-desc p:last-child{margin-bottom:0;}
+  .sergi-desc p.sergi-desc-lead{font-family:'Fraunces',serif; font-weight:600; font-size:1.35rem; color:var(--ink); margin-bottom:14px; line-height:1.3;}
+  .sergi-desc p.sergi-desc-sign{font-style:italic; color:var(--ink);}
+  .sergi-desc .sergi-desc-term{font-family:'Fraunces',serif; font-weight:600; color:var(--ink); font-size:1.05em;}
+  .sergi-text h4{font-family:'Fraunces',serif; font-weight:600; font-size:1rem; margin:0 0 8px;}
+  .sergi-participants{list-style:none; margin:0; padding:0; columns:2; column-gap:32px; max-width:520px;}
+  .sergi-participants li{break-inside:avoid; padding:7px 0; border-bottom:1px solid var(--line); color:var(--ink); font-size:.93rem;}
+  @media (max-width:380px){ .sergi-participants{columns:1;} }
+  .sergi-bookmark-wrap{margin:0;}
+  .sergi-bookmark-wrap h4{font-family:'Fraunces',serif; font-weight:600; font-size:1rem; margin:0 0 14px;}
+  .sergi-bookmark{display:grid; grid-template-columns:1fr 1fr; gap:20px;}
+  .sergi-bookmark figure{margin:0;}
+  .sergi-bookmark button{display:block; width:100%; padding:0; border:none; background:none; cursor:zoom-in;}
+  .sergi-bookmark img{width:100%; aspect-ratio:1/3; object-fit:cover; display:block; border-radius:4px; box-shadow:0 4px 14px rgba(0,0,0,.14); transition:transform .2s ease;}
+  .sergi-bookmark button:hover img{transform:translateY(-3px);}
+  .sergi-bookmark figcaption{margin-top:10px; font-size:.82rem; color:var(--ink-dim); text-align:center;}
+  .sergi-tabs{display:flex; gap:28px; border-bottom:1px solid var(--line); margin-bottom:20px;}
+  .sergi-tab{
+    background:none; border:none; padding:0 0 10px; margin-bottom:-1px; cursor:pointer;
+    font-family:'Fraunces',serif; font-weight:600; font-size:1rem; color:var(--ink-dim);
+    border-bottom:2px solid transparent; transition:color .15s, border-color .15s;
+  }
+  .sergi-tab:hover{color:var(--ink);}
+  .sergi-tab.active{color:var(--ink); border-color:var(--accent);}
+  .sergi-gallery-wrap h4{font-family:'Fraunces',serif; font-weight:600; font-size:1rem; margin:0 0 14px;}
+  .sergi-gallery{display:grid; grid-template-columns:repeat(auto-fill, minmax(140px,1fr)); gap:10px;}
+  .sergi-gallery[hidden]{display:none;}
+  .sergi-gallery-empty{grid-column:1/-1; margin:0; padding:28px 0; color:var(--ink-dim); font-size:.92rem;}
+  .sergi-gallery figure{margin:0; overflow:hidden; background:var(--card); border:1px solid var(--line); aspect-ratio:4/5;}
+  .sergi-gallery img{width:100%; height:100%; object-fit:cover; cursor:zoom-in;}
+  @media (max-width:640px){
+    .sergi-body{grid-template-columns:1fr;}
+    .sergi-media{max-width:300px;}
+  }
+  @media (max-width:520px){
+    .sergi-list{grid-template-columns:repeat(auto-fill, minmax(120px, 1fr)); gap:24px 14px;}
+    .sergi-card h3{font-size:.9rem;}
+  }
+
+  /* PORTFOLYO */
+  .member-list{
+    display:grid; grid-template-columns:repeat(auto-fill, minmax(150px, 1fr));
+    gap:36px 28px; width:100%;
+  }
+  .member-item{cursor:pointer; text-align:center; background:none; border:none; padding:0; font-family:inherit;}
+  .member-item .cover{
+    width:100%; aspect-ratio:4/5; overflow:hidden; background:var(--card);
+    border:1px solid var(--line); margin-bottom:10px;
+  }
+  .member-item .cover img{width:100%; height:100%; object-fit:cover; transition:transform .2s;}
+  .member-item:hover .cover img{transform:scale(1.03);}
+  .member-item .cover-empty{display:flex; align-items:center; justify-content:center; background:var(--paper-2);}
+  .member-item .cover-empty span{font-family:'Fraunces',serif; font-weight:600; font-size:2.6rem; color:var(--ink-dim); opacity:.55;}
+  .member-item h3{font-family:'Fraunces',serif; font-weight:600; font-size:.95rem; margin:0; color:var(--ink);}
+  @media (max-width:520px){
+    .member-list{grid-template-columns:repeat(auto-fill, minmax(110px, 1fr)); gap:24px 14px;}
+    .member-item h3{font-size:.82rem;}
+  }
+  .back-btn{margin-bottom:28px;}
+  .detail-name{font-family:'Fraunces',serif; font-weight:600; font-size:1.6rem; margin:0 0 24px;}
+  .mosaic{position:relative; width:100%; line-height:0;}
+  @media (min-width:1150px){
+    /* Portfolyo kolajı sayfa kenar boşluklarının dışına taşarak daha geniş yer kaplar */
+    #detail-grid.mosaic{width:min(1400px, calc(100vw - 64px)); left:50%; transform:translateX(-50%);}
+  }
+  .mosaic figure{position:absolute; margin:0; overflow:hidden;}
+  .mosaic img{display:block; width:100%; height:100%; object-fit:fill; cursor:zoom-in; transition:filter .2s ease;}
+  .mosaic img:hover{filter:brightness(1.06);}
+
+  /* CONTACT */
+  .contact-grid{display:flex; justify-content:space-between; flex-wrap:wrap; gap:32px; margin-bottom:12px;}
+  .contact-grid a.mail{font-family:'Fraunces',serif; font-size:1.35rem; text-decoration:none; border-bottom:1px solid var(--accent);}
+  .social-row{display:flex; gap:18px; align-items:center;}
+  .social-row a{
+    color:var(--ink-dim); display:inline-flex; align-items:center; justify-content:center;
+    width:40px; height:40px; border:1px solid var(--line); border-radius:50%;
+    transition:color .15s, border-color .15s, background .15s;
+  }
+  .social-row a:hover{color:var(--card); background:var(--accent); border-color:var(--accent);}
+
+  footer{border-top:1px solid var(--line); padding:26px 0; margin-top:20px;}
+  .foot-since{font-family:'Fraunces',serif; font-style:italic; color:var(--accent-2);}
+  .foot-bottom{color:var(--ink-dim); font-size:.85rem; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;}
+
+  ::selection{background:var(--accent); color:#fff;}
+  :focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+
+  /* LIGHTBOX */
+  .strip img{cursor:zoom-in;}
+  .lightbox{
+    display:none; position:fixed; inset:0; z-index:1000;
+    background:rgba(20,17,12,.92);
+    align-items:center; justify-content:center;
+    padding:env(safe-area-inset-top,0px) env(safe-area-inset-right,0px) env(safe-area-inset-bottom,0px) env(safe-area-inset-left,0px);
+  }
+  .lightbox.open{display:flex;}
+  .lb-figure{margin:0; display:flex; flex-direction:column; align-items:center; gap:14px;}
+  .lightbox img{max-width:88vw; max-height:82vh; width:auto; height:auto; box-shadow:0 8px 40px rgba(0,0,0,.5);}
+  .lb-caption{color:#f4efe4; font-size:.95rem; letter-spacing:.02em; text-align:center; margin:0;}
+  .lb-caption[hidden]{display:none;}
+  .lb-close{
+    position:fixed; top:calc(18px + env(safe-area-inset-top,0px)); right:calc(18px + env(safe-area-inset-right,0px));
+    width:44px; height:44px; border-radius:50%; border:1px solid rgba(255,255,255,.3);
+    background:rgba(0,0,0,.35); color:#f4efe4; font-size:1.2rem; cursor:pointer; z-index:1001;
+  }
+  .lb-close:hover{background:rgba(0,0,0,.55);}
+  .lb-nav{
+    position:fixed; top:50%; transform:translateY(-50%);
+    width:52px; height:52px; border-radius:50%; border:1px solid rgba(255,255,255,.3);
+    background:rgba(0,0,0,.35); color:#f4efe4; font-size:1.8rem; line-height:1; cursor:pointer; z-index:1001;
+  }
+  .lb-nav:hover{background:rgba(0,0,0,.55);}
+  .lb-prev{left:calc(16px + env(safe-area-inset-left,0px));}
+  .lb-next{right:calc(16px + env(safe-area-inset-right,0px));}
+  @media (max-width:600px){
+    .lb-nav{width:42px; height:42px; font-size:1.5rem;}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <button class="brand" data-view="home"><img src="/images/logo.png" alt="EFOT — Ege Üniversitesi Fotoğraf Topluluğu logosu"></button>
+    <button class="navtoggle" id="navToggle" aria-label="Menüyü aç">☰</button>
+    <ul class="navlinks" id="navLinks">
+      <li><button data-view="home" class="active">Anasayfa</button></li>
+      <li><button data-view="home" data-anchor="duyurular">Duyurular</button></li>
+      <li><button data-view="portfolyo">Portfolyo</button></li>
+      <li><button data-view="etkinlikler">Etkinlikler</button></li>
+      <li><button data-view="bulten">Bülten</button></li>
+      <li class="has-sub" id="archiveItem">
+        <button class="sub-toggle" id="archiveToggle" aria-haspopup="true" aria-expanded="false">Arşiv <span class="caret">▾</span></button>
+        <ul class="submenu" id="archiveSubmenu">
+          <li><button data-view="dergiler">Dergiler</button></li>
+          <li><button data-view="sergiler">Sergiler</button></li>
+        </ul>
+      </li>
+      <li><button data-view="envanter">Envanter</button></li>
+      <li><button data-view="home" data-anchor="iletisim">İletişim</button></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ANASAYFA -->
+<div class="view active" id="view-home">
+  <header class="hero">
+    <div class="hero-bg" id="heroBgA"></div>
+    <div class="hero-bg" id="heroBgB"></div>
+    <div class="hero-scrim"></div>
+    <div class="wrap">
+      <div class="eyebrow-photo">f/2.8 · 1/125 · İzmir</div>
+      <h1 class="title">Ege Üniversitesi<br>Fotoğraf Topluluğu</h1>
+      <p class="lead">
+        Ege Üniversitesi'nde fotoğrafla uğraşan, tartışan, karanlık odada film yıkayan ve
+        arada bir de sadece takılan bir grup arkadaşız. Deklanşöre basmak fotoğrafın en küçük parçası.
+      </p>
+    </div>
+  </header>
+
+  <section class="wrap" id="hakkimizda">
+    <div class="about-grid">
+      <div>
+        <h2 class="h2">Biz Kimiz?</h2>
+        <p class="about-lead">
+          Ege Üniversitesi Fotoğraf Topluluğu (EFOT), 1985 yılında Tıp Fakültesi bünyesinde kuruldu; daha sonra
+          ayrılarak tüm üniversiteye açık bir öğrenci topluluğu haline geldi.
+        </p>
+        <p>
+          Laik, demokratik ve kâr amacı gütmeyen bir topluluğuz; hiçbir siyasi partiye bağlı değiliz ve siyasetle
+          uğraşmıyoruz. Atatürkçü düşünceyi ilke edinmiş bir oluşum olarak Ege Üniversitesi Sağlık, Kültür ve Spor
+          Daire Başkanlığı'nın Topluluklar Yönetmeliği çerçevesinde çalışıyoruz.
+        </p>
+        <p>Önceliğimiz, fotoğraf sanatını sevdirmek ve daha çok insana ulaştırmak.</p>
+      </div>
+      <div>
+        <p class="about-label">Neler yapıyoruz</p>
+        <ol class="about-aims">
+          <li>Temel fotoğrafçılık eğitimleriyle fotoğrafın temellerini öğretiyoruz.</li>
+          <li>Analog fotoğraf makinelerinin kullanımını yaygınlaştırıyoruz.</li>
+          <li>Karanlık odada üyelerimizin kendi fotoğraflarını basmasını sağlıyoruz.</li>
+          <li>İzmir ve çevresine gezilerle teoriyi pratiğe döküyoruz.</li>
+          <li>Sunum ve söyleşilerle fotoğraf dünyasındaki güncel gelişmeleri paylaşıyoruz.</li>
+          <li>Sergiler düzenleyerek fotoğraf sanatını yaşatıyoruz.</li>
+        </ol>
+      </div>
+    </div>
+    <div class="about-advisor">
+      <p class="about-advisor-label">Akademik Danışman</p>
+      <p class="about-advisor-name">
+        <a href="https://www.yigitacik.net/" target="_blank" rel="noopener">Öğr. Gör. Dr. Yiğit Açık <span aria-hidden="true">↗</span></a>
+      </p>
+      <p class="about-advisor-role">Ege Üniversitesi Medya Uygulama ve Araştırma Merkezi</p>
+      <div class="about-facts">
+        <div><strong>1985</strong><span>Kuruluş yılı</span></div>
+        <div><strong>40+</strong><span>Yıllık birikim</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="duyuru-band" id="duyurular">
+    <div class="wrap">
+      <div class="duyuru-head">
+        <p class="duyuru-label">Güncel</p>
+        <h2 class="h2">Duyurular</h2>
+      </div>
+      <ul class="duyuru-list" id="duyuru-list"></ul>
+    </div>
+  </section>
+
+  <section class="wrap" id="iletisim">
+    <h2 class="h2">Bize Ulaşın</h2>
+    <div class="contact-grid">
+      <a class="mail" href="mailto:haber.efot@gmail.com">haber.efot@gmail.com</a>
+      <div class="social-row">
+        <a href="https://www.instagram.com/efot_ege/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://www.youtube.com/@efot3175" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.76-1.77C18.3 5 12 5 12 5s-6.3 0-7.84.43A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.76 1.77C5.7 19 12 19 12 19s6.3 0 7.84-.43a2.5 2.5 0 0 0 1.76-1.77A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15V9l5.2 3z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/company/ege-%C3%BCniversitesi-foto%C4%9Fraf-toplulu%C4%9Fu-efot/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3.5 9h3v12h-3zM9.5 9h2.88v1.64h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.6V21h-3v-6.4c0-1.53-.03-3.5-2.13-3.5-2.14 0-2.47 1.67-2.47 3.4V21h-3z"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- PORTFOLYO -->
+<div class="view" id="view-portfolyo">
+  <div class="wrap page-head">
+    <h2 class="h2">Portfolyo</h2>
+    <p>Üyelerimizin kendi seçkileri.</p>
+  </div>
+  <section class="wrap">
+    <div id="portfolyo-list-wrap">
+      <div class="member-list" id="member-list"></div>
+    </div>
+    <div id="portfolyo-detail-wrap" style="display:none;">
+      <button class="btn ghost back-btn" id="backToMembers">← Üyelere dön</button>
+      <h3 class="detail-name" id="detail-name"></h3>
+      <div class="member-grid" id="detail-grid"></div>
+    </div>
+  </section>
+</div>
+
+<!-- ETKİNLİKLER -->
+<div class="view" id="view-etkinlikler">
+  <div class="wrap page-head">
+    <h2 class="h2">Ne Yapıyoruz?</h2>
+  </div>
+  <section class="wrap" id="etkinlik-groups"></section>
+</div>
+
+<!-- BÜLTEN -->
+<div class="view" id="view-bulten">
+  <div class="wrap page-head">
+    <h2 class="h2">Bülten</h2>
+    <p>Aylık bültenimizi Substack üzerinden yayınlıyoruz. Aşağıdan geçmiş sayılara ulaşabilir, "Substack'te Oku" ile ilgili yazıya gidebilirsiniz.</p>
+  </div>
+  <section class="wrap">
+    <ul class="bulten-list" id="bulten-list"></ul>
+  </section>
+</div>
+
+<!-- DERGİLER -->
+<div class="view" id="view-dergiler">
+  <div class="wrap page-head">
+    <h2 class="h2">Dergiler</h2>
+    <p>Topluluğumuzun çıkardığı tüm dergiler, gerçekleştirildikleri tarihe göre kronolojik olarak burada. Kapağa ya da isme tıklayarak online sürümünü görüntüleyebilirsiniz.</p>
+  </div>
+  <section class="wrap">
+    <ul class="dergi-list" id="dergi-list"></ul>
+  </section>
+</div>
+
+<!-- SERGİLER -->
+<div class="view" id="view-sergiler">
+  <div class="wrap page-head">
+    <h2 class="h2">Sergiler</h2>
+    <p>Topluluğun düzenlediği ve katıldığı sergiler. Afişe tıklayarak sergi metnine, katılımcı listesine ve açılış günü fotoğraflarına ulaşabilirsiniz.</p>
+  </div>
+  <section class="wrap">
+    <div id="sergiler-list-wrap">
+      <div class="sergi-list" id="sergi-list"></div>
+    </div>
+    <div id="sergiler-detail-wrap" style="display:none;">
+      <button class="btn ghost back-btn" id="backToSergiler">← Sergilere dön</button>
+      <div class="sergi-date" id="sergi-detail-date"></div>
+      <h3 id="sergi-detail-title"></h3>
+      <div class="sergi-body">
+        <div class="sergi-media">
+          <div class="sergi-poster" id="sergi-detail-poster"></div>
+          <div class="sergi-bookmark-wrap" id="sergi-detail-bookmark-wrap">
+            <h4>Kitap Ayracı</h4>
+            <div class="sergi-bookmark" id="sergi-detail-bookmark"></div>
+          </div>
+        </div>
+        <div class="sergi-text">
+          <div class="sergi-desc" id="sergi-detail-desc"></div>
+          <h4>Katılımcılar</h4>
+          <ul class="sergi-participants" id="sergi-detail-participants"></ul>
+        </div>
+      </div>
+      <div class="sergi-gallery-wrap">
+        <div class="sergi-tabs" role="tablist">
+          <button type="button" class="sergi-tab active" role="tab" aria-selected="true" data-target="sergi-detail-works">Sergi Fotoğrafları</button>
+          <button type="button" class="sergi-tab" role="tab" aria-selected="false" data-target="sergi-detail-gallery">Açılış Günü</button>
+        </div>
+        <div class="sergi-gallery" id="sergi-detail-works"></div>
+        <div class="sergi-gallery" id="sergi-detail-gallery" hidden></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ENVANTER -->
+<div class="view" id="view-envanter">
+  <div class="wrap page-head">
+    <h2 class="h2">Envanter</h2>
+    <p>Topluluğun sahip olduğu film kameraları. Ödünç almak isteyen üyeler İletişim'den bize ulaşabilir.</p>
+  </div>
+  <section class="wrap">
+    <div class="envanter-group">
+      <h3>Film Kameralar</h3>
+      <p class="envanter-summary" id="kamera-ozet"></p>
+      <ul class="envanter-list" id="kamera-list"></ul>
+    </div>
+
+    <div class="envanter-group">
+      <h3>Kitaplar</h3>
+      <ul class="envanter-list" id="kitap-list"></ul>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="wrap foot-bottom">
+    <span>Ege Üniversitesi Fotoğraf Topluluğu <span class="foot-since">· 1985’ten beri</span></span>
+    <span>© 2026</span>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" id="lbClose" aria-label="Kapat">✕</button>
+  <button class="lb-nav lb-prev" id="lbPrev" aria-label="Önceki fotoğraf">‹</button>
+  <figure class="lb-figure">
+    <img id="lbImg" src="" alt="Büyütülmüş fotoğraf">
+    <figcaption id="lbCaption" class="lb-caption" hidden></figcaption>
+  </figure>
+  <button class="lb-nav lb-next" id="lbNext" aria-label="Sonraki fotoğraf">›</button>
+</div>
+
+<script>
+// ─────────────────────────────────────────────────────────────
+// İçerik /content klasöründeki JSON dosyalarından yüklenir.
+// Bu dosyalar yönetim panelinden (/admin) düzenlenir; kodu elle
+// değiştirmeye gerek yoktur.
+// ─────────────────────────────────────────────────────────────
+function esc(s){
+  return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+async function loadContent(name){
+  const res = await fetch('/content/' + name + '.json', {cache: 'no-cache'});
+  if(!res.ok) throw new Error(name + '.json yüklenemedi (' + res.status + ')');
+  return res.json();
+}
+function showLoadError(el, what){
+  if(el) el.innerHTML = '<p class="sergi-gallery-empty">' + esc(what) + ' şu anda yüklenemedi. Lütfen sayfayı yenileyin.</p>';
+}
+
+// Anasayfa hero arka planı: fotoğraflar düzenli aralıklarla geçiş yaparak değişir
+function startHero(photos){
+  if(!photos || !photos.length) return;
+  const layers = [document.getElementById('heroBgA'), document.getElementById('heroBgB')];
+  let current = 0;
+  let photoIndex = 0;
+  layers[0].style.backgroundImage = 'url("' + photos[0] + '")';
+  layers[0].classList.add('active');
+  if(photos.length < 2) return;
+  setInterval(() => {
+    photoIndex = (photoIndex + 1) % photos.length;
+    const next = 1 - current;
+    layers[next].style.backgroundImage = 'url("' + photos[photoIndex] + '")';
+    layers[next].classList.add('active');
+    layers[current].classList.remove('active');
+    current = next;
+  }, 30000);
+}
+
+// Duyurular
+function renderDuyurular(list){
+  const el = document.getElementById('duyuru-list');
+  if(!list.length){ el.innerHTML = '<li class="duyuru-empty">Şu anda güncel bir duyuru yok.</li>'; return; }
+  el.innerHTML = list.map(d =>
+    '<li>' +
+      '<div class="duyuru-date">' + esc(d.tarih) + (d.gun ? '<br>' + esc(d.gun) : '') + '</div>' +
+      '<div class="duyuru-text">' +
+        '<h4>' + esc(d.baslik) + '</h4>' +
+        (d.metin ? '<p>' + esc(d.metin) + '</p>' : '') +
+        (d.bilgi ? '<p class="duyuru-meta">' + esc(d.bilgi) + '</p>' : '') +
+      '</div>' +
+    '</li>').join('');
+}
+
+// Etkinlikler
+function renderEtkinlikler(groups){
+  const el = document.getElementById('etkinlik-groups');
+  el.innerHTML = groups.map(g =>
+    '<details class="etkinlik-group">' +
+      '<summary class="etkinlik-head"><h3>' + esc(g.baslik) + '</h3><span class="etkinlik-caret" aria-hidden="true"></span></summary>' +
+      '<div class="etkinlik-body">' +
+        (g.giris ? '<p class="etkinlik-intro">' + esc(g.giris) + '</p>' : '') +
+        '<ul class="envanter-list">' + (g.ogeler || []).map(o =>
+          '<li>' +
+            '<div class="envanter-tag">' + esc(o.etiket) + '</div>' +
+            '<div class="envanter-text"><h4>' + esc(o.baslik) + '</h4>' + (o.aciklama ? '<p>' + esc(o.aciklama) + '</p>' : '') + '</div>' +
+          '</li>').join('') + '</ul>' +
+      '</div>' +
+    '</details>').join('');
+}
+
+// Bülten
+function renderBulten(list){
+  const el = document.getElementById('bulten-list');
+  el.innerHTML = list.map(b =>
+    '<li>' +
+      '<div class="bulten-date">' + esc(b.tarih) + '</div>' +
+      '<div class="bulten-text">' +
+        '<h4>' + esc(b.baslik) + '</h4>' +
+        (b.editorler ? '<p class="editors">Editörler: ' + esc(b.editorler) + '</p>' : '') +
+        (b.katkida_bulunanlar ? '<p class="contributors">Katkıda Bulunanlar: ' + esc(b.katkida_bulunanlar) + '</p>' : '') +
+        (b.ozet ? '<p class="summary">' + esc(b.ozet) + '</p>' : '') +
+        (b.link ? '<a class="bulten-link" href="' + esc(b.link) + '" target="_blank" rel="noopener">Substack\'te Oku ↗</a>' : '') +
+      '</div>' +
+    '</li>').join('');
+}
+
+// Dergiler
+function renderDergiler(list){
+  const el = document.getElementById('dergi-list');
+  el.innerHTML = list.map(d => {
+    const link = d.link ? esc(d.link) : '';
+    const cover = d.kapak ? '<img src="' + esc(d.kapak) + '" alt="' + esc(d.ad) + ' kapak görseli" loading="lazy">' : '';
+    return '<li>' +
+      '<div class="dergi-date">' + esc(d.donem) + '</div>' +
+      (link ? '<a class="dergi-cover" href="' + link + '" target="_blank" rel="noopener" aria-label="' + esc(d.ad) + ' — dergiyi aç">' + cover + '</a>'
+            : '<div class="dergi-cover">' + cover + '</div>') +
+      '<div class="dergi-text">' +
+        '<h4>' + esc(d.ad) + '</h4>' +
+        (d.yer ? '<p class="dergi-place">' + esc(d.yer) + '</p>' : '') +
+        (link ? '<a class="dergi-link" href="' + link + '" target="_blank" rel="noopener">Dergiyi Görüntüle ↗</a>' : '') +
+      '</div>' +
+    '</li>';
+  }).join('');
+}
+
+// Envanter: kameralar (aynı model tek satırda, adediyle) ve kitaplar
+function renderEnvanter(data){
+  const kameralar = data.kameralar || [];
+  const list = document.getElementById('kamera-list');
+  const toplam = kameralar.reduce((t, k) => t + (Number(k.adet) || 0), 0);
+  document.getElementById('kamera-ozet').textContent = kameralar.length + ' model, toplam ' + toplam + ' kamera. Ayrıntılar için bir kameraya tıklayın.';
+  list.innerHTML = '';
+  kameralar.forEach(k => {
+    const li = document.createElement('li');
+    li.className = 'kamera-item';
+    const specs = [["Çıkış yılı",k.yil],["Tür",k.tur],["Film",k.film],["Odaklama",k.odak],["Lens yuvası",k.yuva],["Envanterdeki lensler",k.lensler]];
+    li.innerHTML =
+      '<details><summary>' +
+        '<div class="envanter-tag">' + esc(k.film) + ' Film</div>' +
+        '<div class="envanter-text"><div>' +
+          '<h4>' + esc(k.model) + (Number(k.adet) > 1 ? '<span class="envanter-count">' + esc(k.adet) + ' adet</span>' : '') + '</h4>' +
+          (k.aciklama ? '<p>' + esc(k.aciklama) + '</p>' : '') +
+        '</div></div>' +
+        '<span class="etkinlik-caret" aria-hidden="true"></span>' +
+      '</summary>' +
+      '<div class="kamera-detail"><dl class="kamera-specs">' +
+        specs.map(s => '<div><dt>' + s[0] + '</dt><dd>' + esc(s[1] || '–') + '</dd></div>').join('') +
+      '</dl></div></details>';
+    list.appendChild(li);
+  });
+  const kitapEl = document.getElementById('kitap-list');
+  kitapEl.innerHTML = (data.kitaplar || []).map(b =>
+    '<li>' +
+      '<div class="envanter-tag">' + esc(b.etiket) + '</div>' +
+      '<div class="envanter-text"><div><h4>' + esc(b.baslik) + '</h4>' + (b.not ? '<p>' + esc(b.not) + '</p>' : '') + '</div></div>' +
+    '</li>').join('');
+}
+
+// Lightbox
+const lightbox = document.getElementById('lightbox');
+const lbImg = document.getElementById('lbImg');
+let lbIndex = 0;
+
+let lbList = [];
+function lbSrc(i){ return lbList[i]; }
+function lbLen(){ return lbList.length; }
+let lbCaps = null;
+const lbCaption = document.getElementById('lbCaption');
+function lbUpdateCaption(){
+  const c = lbCaps && lbCaps[lbIndex] ? lbCaps[lbIndex] : '';
+  lbCaption.textContent = c;
+  lbCaption.hidden = !c;
+  lbImg.alt = c ? ('Fotoğraf: ' + c) : ('Fotoğraf ' + (lbIndex + 1));
+}
+function openLightbox(i, list, caps){
+  lbList = list || [];
+  lbCaps = caps || null;
+  lbIndex = i;
+  lbImg.src = lbSrc(lbIndex);
+  lbUpdateCaption();
+  lightbox.classList.add('open');
+}
+function closeLightbox(){
+  lightbox.classList.remove('open');
+  lbImg.src = "";
+}
+function showLbDelta(delta){
+  lbIndex = (lbIndex + delta + lbLen()) % lbLen();
+  lbImg.src = lbSrc(lbIndex);
+  lbUpdateCaption();
+}
+document.getElementById('lbClose').addEventListener('click', closeLightbox);
+document.getElementById('lbPrev').addEventListener('click', () => showLbDelta(-1));
+document.getElementById('lbNext').addEventListener('click', () => showLbDelta(1));
+lightbox.addEventListener('click', (e) => { if(e.target === lightbox) closeLightbox(); });
+document.addEventListener('keydown', (e) => {
+  if(!lightbox.classList.contains('open')) return;
+  if(e.key === 'Escape') closeLightbox();
+  else if(e.key === 'ArrowLeft') showLbDelta(-1);
+  else if(e.key === 'ArrowRight') showLbDelta(1);
+});
+
+const sergilerListWrap = document.getElementById('sergiler-list-wrap');
+const sergilerDetailWrap = document.getElementById('sergiler-detail-wrap');
+const sergiListEl = document.getElementById('sergi-list');
+const sergiDetailDate = document.getElementById('sergi-detail-date');
+const sergiDetailTitle = document.getElementById('sergi-detail-title');
+const sergiDetailPoster = document.getElementById('sergi-detail-poster');
+const sergiDetailDesc = document.getElementById('sergi-detail-desc');
+const sergiDetailParticipants = document.getElementById('sergi-detail-participants');
+const sergiDetailGallery = document.getElementById('sergi-detail-gallery');
+
+// Sergiler: liste (afiş kapak + isim) + tıklayınca detay görünümü
+let EXHIBITIONS = [];
+function toExhibition(s){
+  return {
+    name: s.ad || '',
+    year: s.yil || '',
+    date: s.tarih_yer || '',
+    poster: s.afis || '',
+    bookmark: (s.ayrac_on || s.ayrac_arka) ? { front: s.ayrac_on || '', back: s.ayrac_arka || '' } : null,
+    desc: (s.yazi || []).filter(y => y && y.metin).map(y => y.baslik ? { term: y.baslik, text: y.metin } : y.metin),
+    participants: s.katilimcilar || [],
+    works: (s.eserler || []).filter(e => e && e.foto).map(e => ({ src: e.foto, by: e.fotografci || '' })),
+    opening: (s.acilis || []).filter(Boolean)
+  };
+}
+function renderSergiler(list){
+  EXHIBITIONS = list.map(toExhibition);
+  sergiListEl.innerHTML = '';
+  EXHIBITIONS.forEach((ex, i) => {
+    const card = document.createElement('button');
+    card.className = 'sergi-card';
+    card.innerHTML =
+      '<div class="poster-cover">' + (ex.poster ? '<img src="' + esc(ex.poster) + '" alt="' + esc(ex.name) + ' sergi afişi" loading="lazy">' : '<div class="poster-placeholder">Sergi Afişi<br>yakında</div>') + '</div>' +
+      '<h3>' + esc(ex.name) + '</h3>' +
+      '<p class="sergi-card-date">' + esc(ex.year || ex.date) + '</p>';
+    card.addEventListener('click', () => openSergi(i));
+    sergiListEl.appendChild(card);
+  });
+}
+
+function renderSergiGallery(el, srcs, alt){
+  el.innerHTML = '';
+  if(!srcs.length){
+    el.innerHTML = '<p class="sergi-gallery-empty">Bu bölümün fotoğrafları yakında eklenecek.</p>';
+    return;
+  }
+  const list = srcs.map(s => typeof s === 'string' ? s : s.src);
+  const caps = srcs.map(s => (typeof s === 'object' && s.by) ? s.by : '');
+  srcs.forEach((s, idx) => {
+    const fig = document.createElement('figure');
+    const img = document.createElement('img');
+    img.src = list[idx];
+    img.alt = caps[idx] ? (alt + ' — ' + caps[idx]) : (alt + ' ' + (idx + 1));
+    img.loading = "lazy";
+    img.addEventListener('click', () => openLightbox(idx, list, caps));
+    fig.appendChild(img);
+    el.appendChild(fig);
+  });
+}
+
+function selectSergiTab(targetId){
+  document.querySelectorAll('.sergi-tab').forEach(t => {
+    const on = t.dataset.target === targetId;
+    t.classList.toggle('active', on);
+    t.setAttribute('aria-selected', on);
+    document.getElementById(t.dataset.target).hidden = !on;
+  });
+}
+document.querySelectorAll('.sergi-tab').forEach(t => t.addEventListener('click', () => selectSergiTab(t.dataset.target)));
+
+function openSergi(i){
+  const ex = EXHIBITIONS[i];
+  sergiDetailDate.textContent = ex.date || ex.year || '';
+  sergiDetailTitle.textContent = ex.name;
+  // Sergi yazısı: dizi verilirse her eleman ayrı paragraf, ilk eleman tek başına bir açılış satırıysa vurgulanır
+  sergiDetailDesc.innerHTML = '';
+  (Array.isArray(ex.desc) ? ex.desc : [ex.desc]).forEach((t, k, arr) => {
+    const para = document.createElement('p');
+    if(t && typeof t === 'object'){
+      const strong = document.createElement('strong');
+      strong.className = 'sergi-desc-term';
+      strong.textContent = t.term + ':';
+      para.appendChild(strong);
+      para.appendChild(document.createTextNode(' ' + t.text));
+      sergiDetailDesc.appendChild(para);
+      return;
+    }
+    const term = t.match(/^([A-ZÇĞİÖŞÜ][a-zçğıöşü]+):\s+/);
+    if(term){
+      const strong = document.createElement('strong');
+      strong.className = 'sergi-desc-term';
+      strong.textContent = term[1] + ':';
+      para.appendChild(strong);
+      para.appendChild(document.createTextNode(' ' + t.slice(term[0].length)));
+    } else {
+      para.textContent = t;
+    }
+    if(k === 0 && arr.length > 1 && t.length < 40) para.className = 'sergi-desc-lead';
+    if(k === arr.length - 1 && arr.length > 1 && t.length < 40) para.className = 'sergi-desc-sign';
+    sergiDetailDesc.appendChild(para);
+  });
+  sergiDetailParticipants.innerHTML = '';
+  const partList = (Array.isArray(ex.participants) ? ex.participants : String(ex.participants || '').split(',')).filter(n => n.trim());
+  sergiDetailParticipants.previousElementSibling.style.display = partList.length ? '' : 'none';
+  partList.forEach(n => {
+    const li = document.createElement('li');
+    li.textContent = n.trim();
+    sergiDetailParticipants.appendChild(li);
+  });
+  const mediaList = [];
+  if(ex.poster) mediaList.push(ex.poster);
+  if(ex.bookmark){ [ex.bookmark.front, ex.bookmark.back].filter(Boolean).forEach(s => mediaList.push(s)); }
+  if(ex.poster){
+    sergiDetailPoster.innerHTML = '<button type="button" aria-label="Afişi büyüt"><img src="' + ex.poster + '" alt="' + esc(ex.name) + ' sergi afişi"></button>';
+    sergiDetailPoster.querySelector('button').addEventListener('click', () => openLightbox(0, mediaList));
+  } else {
+    sergiDetailPoster.innerHTML = '<div class="poster-placeholder">Sergi Afişi<br>yakında</div>';
+  }
+  const bmWrap = document.getElementById('sergi-detail-bookmark-wrap');
+  const bmEl = document.getElementById('sergi-detail-bookmark');
+  bmEl.innerHTML = '';
+  if(ex.bookmark){
+    const sides = [[ex.bookmark.front,'Ön yüz'],[ex.bookmark.back,'Arka yüz']].filter(s => s[0]);
+    const offset = ex.poster ? 1 : 0;
+    sides.forEach((s, k) => {
+      const fig = document.createElement('figure');
+      fig.innerHTML = '<button type="button" aria-label="' + s[1] + ' — büyüt"><img src="' + s[0] + '" alt="' + esc(ex.name) + ' kitap ayracı, ' + s[1].toLowerCase() + '"></button><figcaption>' + s[1] + '</figcaption>';
+      fig.querySelector('button').addEventListener('click', () => openLightbox(offset + k, mediaList));
+      bmEl.appendChild(fig);
+    });
+    bmWrap.style.display = 'block';
+  } else {
+    bmWrap.style.display = 'none';
+  }
+  // Sergi fotoğrafları (sergilenen işler) ve açılış günü fotoğrafları iki ayrı galeri.
+  // ex.works / ex.opening dizileri verilmezse demo olarak topluluk fotoğrafları gösterilir.
+  renderSergiGallery(document.getElementById('sergi-detail-works'), ex.works || [], 'Sergi fotoğrafı');
+  renderSergiGallery(sergiDetailGallery, ex.opening || [], 'Açılış günü fotoğrafı');
+  selectSergiTab('sergi-detail-works');
+  sergilerListWrap.style.display = 'none';
+  sergilerDetailWrap.style.display = 'block';
+}
+document.getElementById('backToSergiler').addEventListener('click', () => {
+  sergilerDetailWrap.style.display = 'none';
+  sergilerListWrap.style.display = 'block';
+});
+
+// Portfolyo: üye listesi (ilk fotoğraf kapak) + tıklayınca detay görünümü
+const listWrap = document.getElementById('portfolyo-list-wrap');
+const detailWrap = document.getElementById('portfolyo-detail-wrap');
+const memberListEl = document.getElementById('member-list');
+const detailNameEl = document.getElementById('detail-name');
+const detailGridEl = document.getElementById('detail-grid');
+let MEMBERS = [];
+
+function renderPortfolyo(uyeler){
+  MEMBERS = uyeler.map(u => ({ name: u.ad || '', photos: (u.fotograflar || []).filter(Boolean) }));
+  memberListEl.innerHTML = '';
+  MEMBERS.forEach((m, i) => {
+    const item = document.createElement('button');
+    item.className = 'member-item';
+    if(m.photos.length){
+      item.innerHTML = '<div class="cover"><img alt="' + esc(m.name) + ' portfolyo kapağı" loading="lazy"></div><h3>' + esc(m.name) + '</h3>';
+      item.querySelector('img').src = m.photos[0];
+    } else {
+      item.innerHTML = '<div class="cover cover-empty"><span>' + esc(m.name.charAt(0)) + '</span></div><h3>' + esc(m.name) + '</h3>';
+    }
+    item.addEventListener('click', () => openMember(i));
+    memberListEl.appendChild(item);
+  });
+}
+
+function openMember(i){
+  const m = MEMBERS[i];
+  detailNameEl.textContent = m.name;
+  listWrap.style.display = 'none';
+  detailWrap.style.display = 'block';
+  const srcs = m.photos;
+  if(!srcs.length){
+    detailGridEl._mosaic = null;
+    detailGridEl.classList.remove('mosaic');
+    detailGridEl.style.height = '';
+    detailGridEl.innerHTML = '<p class="sergi-gallery-empty">Bu üyenin fotoğrafları yakında eklenecek.</p>';
+    return;
+  }
+  buildMosaic(detailGridEl, srcs, m.name + ' portfolyosundan bir fotoğraf', idx => openLightbox(idx, srcs));
+}
+
+/* ---------- Mozaik (kolaj) yerleşim ---------- */
+const ratioCache = new Map();
+function getRatio(src){
+  if(ratioCache.has(src)) return Promise.resolve(ratioCache.get(src));
+  return new Promise(res => {
+    const im = new Image();
+    im.onload = () => { const r = im.naturalWidth / im.naturalHeight || 1; ratioCache.set(src, r); res(r); };
+    im.onerror = () => res(1);
+    im.src = src;
+  });
+}
+/* Rastgele "blok kolaj" yerleşimi:
+   Fotoğraflar bir ağaç yapısında ya yan yana (aynı yükseklik) ya da üst üste
+   (aynı genişlik) birleştirilir. Bu birleştirme en-boy oranlarını birebir korur,
+   kırpma yapmaz ve hiç boşluk bırakmaz; sonuç tek bir dikdörtgen tuvaldir.
+   Farklı rastgele ağaçlar denenir, fotoğraf boyutları arasındaki fark
+   makul sınırda kalan ve ekrana en uygun olan düzen seçilir. */
+function seededRandom(seed){
+  let t = seed >>> 0;
+  return () => { t += 0x6D2B79F5; let r = Math.imul(t ^ t >>> 15, 1 | t); r ^= r + Math.imul(r ^ r >>> 7, 61 | r); return ((r ^ r >>> 14) >>> 0) / 4294967296; };
+}
+function hashStr(s){ let x = 2166136261; for(const c of s){ x ^= c.charCodeAt(0); x = Math.imul(x, 16777619); } return x >>> 0; }
+function randomTree(idx, ratios, rnd, targetAr){
+  if(idx.length === 1) return { leaf: idx[0], ar: ratios[idx[0]] };
+  const n = idx.length;
+  const k = Math.max(1, Math.min(n - 1, Math.round(n / 2 + (rnd() - 0.5) * n * 0.7)));
+  const ta = targetAr * k / n, tb = targetAr * (n - k) / n;
+  const a = randomTree(idx.slice(0, k), ratios, rnd, ta), b = randomTree(idx.slice(k), ratios, rnd, tb);
+  const arH = a.ar + b.ar, arV = 1 / (1 / a.ar + 1 / b.ar);
+  // Çoğunlukla hedef orana yaklaştıran birleşim seçilir, bazen rastgele (düzensizlik için)
+  let horiz = Math.abs(Math.log(arH / targetAr)) < Math.abs(Math.log(arV / targetAr));
+  if(rnd() < 0.3) horiz = !horiz;
+  return { a, b, horiz, ar: horiz ? arH : arV };
+}
+function placeTree(node, x, y, w, h, out){
+  if(node.leaf !== undefined){ out.push({ i: node.leaf, x, y, w, h }); return; }
+  if(node.horiz){ const wa = h * node.a.ar; placeTree(node.a, x, y, wa, h, out); placeTree(node.b, x + wa, y, w - wa, h, out); }
+  else { const ha = w / node.a.ar; placeTree(node.a, x, y, w, ha, out); placeTree(node.b, x, y + ha, w, h - ha, out); }
+}
+function collageLayout(ratios, width, seed){
+  const n = ratios.length;
+  // Daha büyük fotoğraflar: satır başına daha az, ortalama alan daha geniş
+  const perRow = width < 520 ? 1.5 : width < 900 ? 2.2 : 2.8;
+  const targetH = n * Math.pow(width / perRow, 2) * 0.8 / width;
+  const minSide = width < 520 ? 110 : width < 900 ? 160 : 190;
+  const rnd = seededRandom(seed);
+  let best = null;
+  for(let t = 0; t < 900; t++){
+    const order = ratios.map((_, i) => i);
+    for(let i = n - 1; i > 0; i--){ const j = Math.floor(rnd() * (i + 1)); [order[i], order[j]] = [order[j], order[i]]; }
+    // Uzun galerilerde / dar ekranlarda fotoğraflar küçülmesin diye
+    // tuval birkaç yatay banda bölünür, her bant kendi içinde rastgele kolajdır.
+    const groups = Math.max(1, Math.round(n / (perRow * 1.7)));
+    const bands = []; let start = 0;
+    for(let g = 0; g < groups; g++){
+      const left = n - start, rest = groups - g;
+      let size = rest === 1 ? left : Math.round(left / rest * (0.75 + rnd() * 0.5));
+      size = Math.max(1, Math.min(left - (rest - 1), size));
+      bands.push(randomTree(order.slice(start, start + size), ratios, rnd, width / (targetH * size / n)));
+      start += size;
+    }
+    let tree = bands[0];
+    for(let g = 1; g < bands.length; g++){
+      tree = { a: tree, b: bands[g], horiz: false, ar: 1 / (1 / tree.ar + 1 / bands[g].ar) };
+    }
+    const H = width / tree.ar;
+    const rects = []; placeTree(tree, 0, 0, width, H, rects);
+    const areas = rects.map(r => r.w * r.h);
+    const spread = Math.max(...areas) / Math.min(...areas);
+    const smallest = Math.min(...rects.map(r => Math.min(r.w, r.h)));
+    let score = Math.pow(Math.log(H / targetH), 2) * 6;
+    if(spread > 4.5) score += Math.pow(spread - 4.5, 2);      // çok büyük farklar olmasın
+    if(spread < 2) score += (2 - spread) * 2;                  // ama fazla düzenli de olmasın
+    if(smallest < minSide) score += Math.pow((minSide - smallest) / 20, 2);
+    if(!best || score < best.score) best = { score, H, rects };
+  }
+  return best;
+}
+function renderMosaic(el){
+  const st = el._mosaic; if(!st) return;
+  const width = el.clientWidth; if(!width) return;
+  if(st.lastWidth === width) return;
+  st.lastWidth = width;
+  const lay = collageLayout(st.ratios, width, st.seed);
+  el.innerHTML = '';
+  el.style.height = Math.round(lay.H) + 'px';
+  lay.rects.forEach(r => {
+    const x0 = Math.round(r.x), y0 = Math.round(r.y), x1 = Math.round(r.x + r.w), y1 = Math.round(r.y + r.h);
+    const fig = document.createElement('figure');
+    fig.style.left = x0 + 'px'; fig.style.top = y0 + 'px';
+    fig.style.width = (x1 - x0) + 'px'; fig.style.height = (y1 - y0) + 'px';
+    const img = document.createElement('img');
+    img.src = st.srcs[r.i];
+    img.alt = st.alt;
+    img.addEventListener('click', () => st.onClick(r.i));
+    fig.appendChild(img);
+    el.appendChild(fig);
+  });
+}
+function buildMosaic(el, srcs, alt, onClick){
+  el.innerHTML = '';
+  el.style.height = '';
+  el.classList.add('mosaic');
+  Promise.all(srcs.map(getRatio)).then(ratios => {
+    el._mosaic = { srcs, ratios, alt, onClick, lastWidth: 0, seed: hashStr(alt) };
+    renderMosaic(el);
+    if(!el._ro && 'ResizeObserver' in window){
+      el._ro = new ResizeObserver(() => renderMosaic(el));
+      el._ro.observe(el);
+    }
+  });
+}
+document.getElementById('backToMembers').addEventListener('click', () => {
+  detailWrap.style.display = 'none';
+  listWrap.style.display = 'block';
+});
+
+// View switching (Portfolyo / Etkinlikler act like separate pages;
+// Duyurular / İletişim just scroll to their section on the Anasayfa)
+function showView(name, anchor){
+  document.querySelectorAll('.view').forEach(v => v.classList.toggle('active', v.id === 'view-' + name));
+  document.querySelectorAll('.navlinks button[data-view]').forEach(b => {
+    const matches = b.dataset.view === name && (b.dataset.anchor || null) === (anchor || null);
+    b.classList.toggle('active', matches);
+  });
+  archiveToggle.classList.toggle('active', name === 'dergiler' || name === 'sergiler');
+  archiveItem.classList.remove('open');
+  navLinks.classList.remove('open');
+  if(name === 'portfolyo'){
+    detailWrap.style.display = 'none';
+    listWrap.style.display = 'block';
+  }
+  if(name === 'sergiler'){
+    sergilerDetailWrap.style.display = 'none';
+    sergilerListWrap.style.display = 'block';
+  }
+  if(anchor){
+    const target = document.getElementById(anchor);
+    if(target){ requestAnimationFrame(() => target.scrollIntoView({behavior:'smooth', block:'start'})); }
+  } else {
+    window.scrollTo({top:0, behavior:'instant' in window ? 'instant' : 'auto'});
+  }
+}
+document.querySelectorAll('[data-view]').forEach(el => {
+  el.addEventListener('click', () => showView(el.dataset.view, el.dataset.anchor));
+});
+
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+navToggle.addEventListener('click', (e) => {
+  e.stopPropagation();
+  navLinks.classList.toggle('open');
+});
+document.addEventListener('click', (e) => {
+  if(navLinks.classList.contains('open') && !navLinks.contains(e.target) && e.target !== navToggle){
+    navLinks.classList.remove('open');
+  }
+});
+
+// Arşiv dropdown
+const archiveItem = document.getElementById('archiveItem');
+const archiveToggle = document.getElementById('archiveToggle');
+archiveToggle.addEventListener('click', (e) => {
+  e.stopPropagation();
+  archiveItem.classList.toggle('open');
+  archiveToggle.setAttribute('aria-expanded', archiveItem.classList.contains('open'));
+});
+document.addEventListener('click', (e) => {
+  if(!archiveItem.contains(e.target)) archiveItem.classList.remove('open');
+});
+
+// İçeriği yükle ve sayfayı doldur
+[
+  ['anasayfa',    d => startHero(d.arka_plan_fotograflari || []), null, ''],
+  ['duyurular',   d => renderDuyurular(d.duyurular || []), 'duyuru-list', 'Duyurular'],
+  ['portfolyo',   d => renderPortfolyo(d.uyeler || []), 'member-list', 'Portfolyo'],
+  ['etkinlikler', d => renderEtkinlikler(d.gruplar || []), 'etkinlik-groups', 'Etkinlikler'],
+  ['bulten',      d => renderBulten(d.sayilar || []), 'bulten-list', 'Bülten'],
+  ['dergiler',    d => renderDergiler(d.dergiler || []), 'dergi-list', 'Dergiler'],
+  ['sergiler',    d => renderSergiler(d.sergiler || []), 'sergi-list', 'Sergiler'],
+  ['envanter',    d => renderEnvanter(d), 'kamera-list', 'Envanter']
+].forEach(([name, render, elId, label]) => {
+  loadContent(name).then(render).catch(err => {
+    console.error(err);
+    if(elId) showLoadError(document.getElementById(elId), label);
+  });
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "duyurular": [
+    {
+      "tarih": "3 Ekim 2026",
+      "gun": "Cumartesi",
+      "baslik": "Yeni Dönem Tanışma Etkinliği",
+      "metin": "Yeni dönem EFOT'ta başlıyor! 1985'ten bu yana fotoğrafı sevdirmek ve yaygınlaştırmak için bir araya gelen topluluğumuzda bu yıl neler yapacağımızı anlatıyor, sizinle tanışmak istiyoruz. Eğitimlerimizden karanlık odaya, gezilerimizden sergilerimize kadar tüm planlarımızı konuşacağız. Fotoğraf makinen olsun ya da olmasın, fotoğrafa merak duyan herkesi bekliyoruz.",
+      "bilgi": "Saat: [ss.dd] · Yer: [etkinlik yeri]"
+    },
+    {
+      "tarih": "6–8 Ekim 2026",
+      "gun": "Salı–Perşembe",
+      "baslik": "Temel Fotoğrafçılık Eğitimi",
+      "metin": "Üç gün sürecek temel fotoğrafçılık eğitimimizde fotoğraf çekmenin temellerini sıfırdan ele alıyoruz: makineni tanıma, diyafram, enstantane ve ISO ile pozlama, ışığı okuma ve kompozisyon. Önce teorik kısmı birlikte işliyor, ardından öğrendiklerimizi İzmir ve çevresine yapacağımız gezilerde uygulamaya döküyoruz. Eğitim yeni başlayanlara yöneliktir, önceden bilgi ya da profesyonel ekipman gerekmez; telefonunla da katılabilirsin.",
+      "bilgi": "Saat: [ss.dd] · Yer: [eğitim yeri] · Kayıt: [kayıt bilgisi]"
+    }
+  ]
+}

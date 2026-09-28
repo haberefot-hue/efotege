@@ -1,0 +1,119 @@
+{
+  "gruplar": [
+    {
+      "baslik": "Eğitimler",
+      "giris": "Dönem başında temel ve karanlık oda fotoğrafçılığı eğitimleri veririz.",
+      "ogeler": [
+        {
+          "etiket": "Başlangıç",
+          "baslik": "Temel Fotoğrafçılık",
+          "aciklama": "[Pozlama üçgeni, kompozisyon, ışık okuma — eğitim süresi ve içerik notu.]"
+        },
+        {
+          "etiket": "Analog",
+          "baslik": "Karanlık Oda",
+          "aciklama": "[Film banyosu, kontakt baskı ve agrandizör kullanımı.]"
+        },
+        {
+          "etiket": "Dijital",
+          "baslik": "Dijital Düzenleme",
+          "aciklama": "[Lightroom / Snapseed ile temel düzenleme ve arşivleme.]"
+        },
+        {
+          "etiket": "İleri",
+          "baslik": "Portfolyo ve Proje Geliştirme",
+          "aciklama": "[Seri üretme, seçki yapma ve proje metni yazma.]"
+        }
+      ]
+    },
+    {
+      "baslik": "Atölyeler",
+      "giris": "Eğitimlerden daha kısa, tek bir tekniğe ya da konuya odaklanan uygulamalı atölyeler düzenleriz.",
+      "ogeler": [
+        {
+          "etiket": "Alternatif Baskı",
+          "baslik": "Siyanotip Atölyesi",
+          "aciklama": "[Güneş ışığıyla baskı; malzeme, süre ve katılım notu.]"
+        },
+        {
+          "etiket": "Analog",
+          "baslik": "İğne Deliği Kamera",
+          "aciklama": "[Kendi pinhole kameranı yap ve çek.]"
+        },
+        {
+          "etiket": "Işık",
+          "baslik": "Portre ve Işık Kurulumu",
+          "aciklama": "[Doğal ve yapay ışıkla portre çekimi.]"
+        },
+        {
+          "etiket": "Yayın",
+          "baslik": "Fanzin ve Fotokitap",
+          "aciklama": "[Seçki, sıralama ve el yapımı fanzin hazırlama.]"
+        }
+      ]
+    },
+    {
+      "baslik": "Geziler",
+      "giris": "Fotoğraf çekmek bahane, birlikte gezmek asıl amaç olduğu geziler düzenleriz.",
+      "ogeler": [
+        {
+          "etiket": "Şehir İçi",
+          "baslik": "İzmir Foto Yürüyüşleri",
+          "aciklama": "[Kemeraltı, Kordon, Alsancak gibi rotalarda sokak fotoğrafı yürüyüşleri.]"
+        },
+        {
+          "etiket": "Günübirlik",
+          "baslik": "Yakın Çevre Gezileri",
+          "aciklama": "[Şirince, Urla, Foça gibi yakın rotalar.]"
+        },
+        {
+          "etiket": "Kamp",
+          "baslik": "Hafta Sonu Kampları",
+          "aciklama": "[Doğa ve gece fotoğrafçılığı odaklı kamp gezileri.]"
+        }
+      ]
+    },
+    {
+      "baslik": "Sergiler",
+      "giris": "Ürettiklerimizi zaman zaman kampüs içinde ve dışında sergileriz.",
+      "ogeler": [
+        {
+          "etiket": "Yıllık",
+          "baslik": "Dönem Sonu Sergisi",
+          "aciklama": "[Üyelerin dönem boyunca ürettiği işlerden seçki.]"
+        },
+        {
+          "etiket": "Tematik",
+          "baslik": "Tema Sergileri",
+          "aciklama": "[Belirli bir konu etrafında hazırlanan küratöryel sergiler.]"
+        },
+        {
+          "etiket": "Ortak",
+          "baslik": "Ortak Sergiler",
+          "aciklama": "[Diğer üniversite toplulukları ile birlikte düzenlenen sergiler.]"
+        }
+      ]
+    },
+    {
+      "baslik": "Buluşmalar",
+      "giris": "Her hafta bir araya gelir, fotoğraf konuşur ve film yıkarız.",
+      "ogeler": [
+        {
+          "etiket": "Haftalık",
+          "baslik": "Fotoğraf Okumaları",
+          "aciklama": "[Üyelerin işlerini birlikte değerlendirdiğimiz buluşmalar.]"
+        },
+        {
+          "etiket": "Söyleşi",
+          "baslik": "Konuk Fotoğrafçılar",
+          "aciklama": "[Davet ettiğimiz fotoğrafçılarla söyleşi ve portfolyo sunumları.]"
+        },
+        {
+          "etiket": "Gösterim",
+          "baslik": "Film ve Belgesel Gösterimleri",
+          "aciklama": "[Fotoğraf ve sinema üzerine gösterim ve sohbet akşamları.]"
+        }
+      ]
+    }
+  ]
+}

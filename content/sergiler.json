@@ -1,0 +1,832 @@
+{
+  "sergiler": [
+    {
+      "ad": "Sokak",
+      "yil": "2026",
+      "tarih_yer": "22 Mayıs – 12 Haziran 2026 · Ege Üniversitesi Merkez Kütüphanesi",
+      "afis": "/images/sergiler/sokak/afis.webp",
+      "ayrac_on": "/images/sergiler/sokak/ayrac-on.webp",
+      "ayrac_arka": "/images/sergiler/sokak/ayrac-arka.webp",
+      "yazi": [
+        {
+          "baslik": "",
+          "metin": "Sokak…"
+        },
+        {
+          "baslik": "",
+          "metin": "Belki bir haykırışın, belki bir arayışın, belki bir susuşun, belki de bir kayboluşun adı… Belki de bütün bunları ve daha nicesini içinde barındıran devasa bir tablonun ta kendisi… Habersiz geçtiğimiz yüzlerce “sokak”ta, yüzbinlerce yaşanmışlık saklı. Farkında olmadan bastığımız kaldırımlar, birilerinin usulca ardında bıraktığı anılarının sessiz şahitleri…"
+        },
+        {
+          "baslik": "",
+          "metin": "Günü kurtarmaya çalışan seyyar satıcılar, açtığı gitar çantasına hiç para bırakılmasa da coşkuyla müziklerine devam eden şarkıcılar, masumca oyun oynayan çocuklar ve bundan mahrum dilenci çocuklar, bir yerlere yetişmeye çalışanlar, bir yerlerden kaçanlar… Hepsi “sokağın” her gün görüp pek de dikkat etmediğimiz sadece birkaç detayı…"
+        },
+        {
+          "baslik": "",
+          "metin": "Aslında uçsuz bucaksız olan insan doğasının dertleri, parçaları yine aynı birkaç noktada toplanıyor eninde sonunda. Her birimiz dönüp dolaşıp yine aynı “sokak”tan geçiyor, aynı acının paydaşları oluyor, aynı yollarda eskitiyoruz sarsak ruhumuzu…"
+        },
+        {
+          "baslik": "",
+          "metin": "İşte bu yüzden şu an kapısından girdiğiniz bu sergi aslında her birimizden birer kırıntı barındırıyor, birer iz nefes alıyor her fotoğrafta bütün insanlıktan. Sergiyi dolaşırken en derinlerinizde bunu hissetmenizi diliyor ve buradan çıktığınızda “sokağın” anlattıklarına artık daha dikkatli kulak vereceğinizi umuyoruz."
+        },
+        {
+          "baslik": "",
+          "metin": "Keyifli sergiler…"
+        }
+      ],
+      "katilimcilar": [
+        "Abdulsamet Yavuz",
+        "Ali Yıldırım",
+        "Batın İnce",
+        "Betül İman",
+        "Daria Tohum",
+        "Doğa Tuntaş",
+        "Emre Türkyılmaz",
+        "Furkan Karaman",
+        "Göksu Nur Hırca",
+        "Hasan Basri Oklu",
+        "Hayat Minel Atılgan",
+        "Hazal Sıkar",
+        "İkbal Şengün",
+        "İpek Tüzün",
+        "Kevser Sıla Demir",
+        "Ömer Faruk Mahmutlar",
+        "Rezan Dinler",
+        "Rüveyda Şentürk",
+        "Sena Çırakoğlu",
+        "Sinem İlgi Tuzlu",
+        "Zelal Alkan"
+      ],
+      "eserler": [
+        {
+          "foto": "/images/sergiler/sokak/eserler/01.jpg",
+          "fotografci": "Abdulsamet Yavuz"
+        },
+        {
+          "foto": "/images/sergiler/sokak/eserler/02.jpg",
+          "fotografci": "Abdulsamet Yavuz"
+        },
+        {
+          "foto": "/images/sergiler/sokak/eserler/03.webp",
+          "fotografci": "Abdulsamet Yavuz"
+        },
+        {
+          "foto": "/images/sergiler/sokak/eserler/04.jpg",
+          "fotografci": "Ali Yıldırım"
+        },
+        {
+          "foto": "/images/sergiler/sokak/eserler/05.webp",
+          "fotografci": "Batın İnce"
+        },
+        {
+          "foto": "/images/sergiler/sokak/eserler/06.jpg",
+          "fotografci": "Betül İman"
+        },
+        {
+          "foto": "/images/sergiler/sokak/eserler/07.jpg",
+          "fotografci": "Daria Tohum"
+        },
+        {
+          "foto": "/images/sergiler/sokak/eserler/08.webp",
+          "fotografci": "Doğa Tuntaş"
+        },
+        {
+          "foto": "/images/sergiler/sokak/eserler/09.webp",
+          "fotografci": "Emre Türkyılmaz"
+        },
+        {
+          "foto": "/images/sergiler/sokak/eserler/10.webp",
+          "fotografci": "Emre Türkyılmaz"
+        },
+        {
+          "foto": "/images/sergiler/sokak/eserler/11.jpg",
+          "fotografci": "Emre Türkyılmaz"
+        },
+        {
+          "foto": "/images/sergiler/sokak/eserler/12.webp",
+          "fotografci": "Furkan Karaman"
+        },
+        {
+          "foto": "/images/sergiler/sokak/eserler/13.webp",
+          "fotografci": "Göksu Nur Hırca"
+        },
+        {
+          "foto": "/images/sergiler/sokak/eserler/14.webp",
+          "fotografci": "Hasan Basri Oklu"
+        },
+        {
+          "foto": "/images/sergiler/sokak/eserler/15.webp",
+          "fotografci": "Hayat Minel Atılgan"
+        },
+        {
+          "foto": "/images/sergiler/sokak/eserler/16.webp",
+          "fotografci": "Hazal Sıkar"
+        },
+        {
+          "foto": "/images/sergiler/sokak/eserler/17.jpg",
+          "fotografci": "İkbal Şengün"
+        },
+        {
+          "foto": "/images/sergiler/sokak/eserler/18.webp",
+          "fotografci": "İkbal Şengün"
+        },
+        {
+          "foto": "/images/sergiler/sokak/eserler/19.webp",
+          "fotografci": "İpek Tüzün"
+        },
+        {
+          "foto": "/images/sergiler/sokak/eserler/20.jpg",
+          "fotografci": "Kevser Sıla Demir"
+        },
+        {
+          "foto": "/images/sergiler/sokak/eserler/21.webp",
+          "fotografci": "Ömer Faruk Mahmutlar"
+        },
+        {
+          "foto": "/images/sergiler/sokak/eserler/22.webp",
+          "fotografci": "Ömer Faruk Mahmutlar"
+        },
+        {
+          "foto": "/images/sergiler/sokak/eserler/23.webp",
+          "fotografci": "Rezan Dinler"
+        },
+        {
+          "foto": "/images/sergiler/sokak/eserler/24.jpg",
+          "fotografci": "Rüveyda Şentürk"
+        },
+        {
+          "foto": "/images/sergiler/sokak/eserler/25.webp",
+          "fotografci": "Sena Çırakoğlu"
+        },
+        {
+          "foto": "/images/sergiler/sokak/eserler/26.webp",
+          "fotografci": "Sinem İlgi Tuzlu"
+        },
+        {
+          "foto": "/images/sergiler/sokak/eserler/27.webp",
+          "fotografci": "Zelal Alkan"
+        }
+      ],
+      "acilis": [
+        "/images/sergiler/sokak/acilis/01.webp",
+        "/images/sergiler/sokak/acilis/02.webp",
+        "/images/sergiler/sokak/acilis/03.webp",
+        "/images/sergiler/sokak/acilis/04.webp",
+        "/images/sergiler/sokak/acilis/05.webp",
+        "/images/sergiler/sokak/acilis/06.webp",
+        "/images/sergiler/sokak/acilis/07.webp",
+        "/images/sergiler/sokak/acilis/08.webp",
+        "/images/sergiler/sokak/acilis/09.webp",
+        "/images/sergiler/sokak/acilis/10.webp",
+        "/images/sergiler/sokak/acilis/11.webp",
+        "/images/sergiler/sokak/acilis/12.webp",
+        "/images/sergiler/sokak/acilis/13.webp",
+        "/images/sergiler/sokak/acilis/14.webp",
+        "/images/sergiler/sokak/acilis/15.webp",
+        "/images/sergiler/sokak/acilis/16.webp",
+        "/images/sergiler/sokak/acilis/17.webp",
+        "/images/sergiler/sokak/acilis/18.webp",
+        "/images/sergiler/sokak/acilis/19.webp",
+        "/images/sergiler/sokak/acilis/20.webp"
+      ]
+    },
+    {
+      "ad": "Kusur",
+      "yil": "2025",
+      "tarih_yer": "10 – 26 Aralık 2025 · SKS Sergi Alanı",
+      "afis": "/images/sergiler/kusur/afis.webp",
+      "ayrac_on": "/images/sergiler/kusur/ayrac-on.webp",
+      "ayrac_arka": "/images/sergiler/kusur/ayrac-arka.webp",
+      "yazi": [
+        {
+          "baslik": "",
+          "metin": "Mükemmelliğinin sarhoş edici dünyasından başını kaldırıp da, ruhunun derin çukurlarının farkında olmayan kişinin durumu ne acı. Ama hayatta öyle anlarla karşı karşıya geliriz ki, bir ömür boyu kaçtığımız şeyler, bir anda karşımıza dikiliverir. Bununla bazen bir sözde, bazen bir bakışta, bazen de uzak bir anının soluk hatırasında karşılaşabiliriz. Ama zor olan şey belki de karşılaşmak, bulmak değildir; asıl zor olan, onu bulduğumuzda kendi karanlığımıza bakabilme cesaretimizin güçlüğüdür. Zordur çünkü, insan sürekli kaçar; kendinden, karanlığından, hatalarından, kusurlarından, ölümden…"
+        },
+        {
+          "baslik": "",
+          "metin": "Ve tabii ki ölüm! Kusursuz insanların, kusursuz toprağa, kusursuz şekilde yerleştirileceği büyük son… Unutmayın, ölüm hepimizi eşitleyecek ve bu gördüğünüz şaşaalı bedenler, bir gün bir böcek topluluğunun kusursuz bir öğününü oluşturacaklar."
+        },
+        {
+          "baslik": "",
+          "metin": "İşte bu sergiyi; kaçanlara, mükemmel kılıfının altındaki bütün kendinden uzak kimliklere karşı hem küçük bir başkaldırı olarak kabul edin; hem de kendi karanlığına bakabilmekten çekinmeyen, insanı, dünyayı anlamaya çalışan bütün cesur zihinlere bir saygı duruşu olarak…"
+        },
+        {
+          "baslik": "",
+          "metin": "Keyifli sergiler…"
+        }
+      ],
+      "katilimcilar": [
+        "Abdulbaki Üste",
+        "Abdulsamet Yavuz",
+        "Ali Yıldırım",
+        "Ayşe Rana Kurtyemez",
+        "Bahtınur Ertuğal",
+        "Betül İman",
+        "Deniz Eren Tinyozoğlu",
+        "Derin Güntürkün",
+        "Dilara H.",
+        "Doğa Tuntaş",
+        "Emre Türkyılmaz",
+        "Eren Çınar",
+        "Göksu Nur Hırca",
+        "Hasan Basri Oklu",
+        "Havva Taşlı",
+        "İpek Tüzün",
+        "Kevser Aslan",
+        "Ömer Faruk Mahmutlar",
+        "Rüveyda Şentürk",
+        "Sıla Günler",
+        "Sümeyra Ağraş",
+        "Zelal Alkan"
+      ],
+      "eserler": [
+        {
+          "foto": "/images/sergiler/kusur/eserler/01.webp",
+          "fotografci": "Ömer Faruk Mahmutlar"
+        },
+        {
+          "foto": "/images/sergiler/kusur/eserler/02.webp",
+          "fotografci": "Zelal Alkan"
+        },
+        {
+          "foto": "/images/sergiler/kusur/eserler/03.jpg",
+          "fotografci": "Sıla Günler"
+        },
+        {
+          "foto": "/images/sergiler/kusur/eserler/04.webp",
+          "fotografci": "Sümeyra Ağraş"
+        },
+        {
+          "foto": "/images/sergiler/kusur/eserler/05.webp",
+          "fotografci": "Rüveyda Şentürk"
+        },
+        {
+          "foto": "/images/sergiler/kusur/eserler/06.webp",
+          "fotografci": "Kevser Aslan"
+        },
+        {
+          "foto": "/images/sergiler/kusur/eserler/07.webp",
+          "fotografci": "İpek Tüzün"
+        },
+        {
+          "foto": "/images/sergiler/kusur/eserler/08.webp",
+          "fotografci": "Havva Taşlı"
+        },
+        {
+          "foto": "/images/sergiler/kusur/eserler/09.webp",
+          "fotografci": "Hasan Basri Oklu"
+        },
+        {
+          "foto": "/images/sergiler/kusur/eserler/10.webp",
+          "fotografci": "Göksu Nur Hırca"
+        },
+        {
+          "foto": "/images/sergiler/kusur/eserler/11.webp",
+          "fotografci": "Eren Çınar"
+        },
+        {
+          "foto": "/images/sergiler/kusur/eserler/12.webp",
+          "fotografci": "Emre Türkyılmaz"
+        },
+        {
+          "foto": "/images/sergiler/kusur/eserler/13.webp",
+          "fotografci": "Doğa Tuntaş"
+        },
+        {
+          "foto": "/images/sergiler/kusur/eserler/14.jpg",
+          "fotografci": "Dilara H."
+        },
+        {
+          "foto": "/images/sergiler/kusur/eserler/15.webp",
+          "fotografci": "Derin Güntürkün"
+        },
+        {
+          "foto": "/images/sergiler/kusur/eserler/16.webp",
+          "fotografci": "Deniz Eren Tinyozoğlu"
+        },
+        {
+          "foto": "/images/sergiler/kusur/eserler/17.jpg",
+          "fotografci": "Betül İman"
+        },
+        {
+          "foto": "/images/sergiler/kusur/eserler/18.webp",
+          "fotografci": "Betül İman"
+        },
+        {
+          "foto": "/images/sergiler/kusur/eserler/19.webp",
+          "fotografci": "Bahtınur Ertuğal"
+        },
+        {
+          "foto": "/images/sergiler/kusur/eserler/20.webp",
+          "fotografci": "Ayşe Rana Kurtyemez"
+        },
+        {
+          "foto": "/images/sergiler/kusur/eserler/21.webp",
+          "fotografci": "Abdulbaki Üste"
+        },
+        {
+          "foto": "/images/sergiler/kusur/eserler/22.webp",
+          "fotografci": "Abdulsamet Yavuz"
+        },
+        {
+          "foto": "/images/sergiler/kusur/eserler/23.webp",
+          "fotografci": "Abdulsamet Yavuz"
+        },
+        {
+          "foto": "/images/sergiler/kusur/eserler/24.webp",
+          "fotografci": "Ali Yıldırım"
+        }
+      ],
+      "acilis": [
+        "/images/sergiler/kusur/acilis/01.webp",
+        "/images/sergiler/kusur/acilis/02.webp",
+        "/images/sergiler/kusur/acilis/03.webp",
+        "/images/sergiler/kusur/acilis/04.webp",
+        "/images/sergiler/kusur/acilis/05.webp",
+        "/images/sergiler/kusur/acilis/06.webp",
+        "/images/sergiler/kusur/acilis/07.webp",
+        "/images/sergiler/kusur/acilis/08.webp",
+        "/images/sergiler/kusur/acilis/09.webp",
+        "/images/sergiler/kusur/acilis/10.webp",
+        "/images/sergiler/kusur/acilis/11.webp"
+      ]
+    },
+    {
+      "ad": "Analog",
+      "yil": "2025",
+      "tarih_yer": "21 Mayıs – 4 Haziran 2025 · Prof. Dr. Yusuf Vardar MÖTBE Kültür Merkezi",
+      "afis": "/images/sergiler/analog/afis.webp",
+      "ayrac_on": "",
+      "ayrac_arka": "",
+      "yazi": [
+        {
+          "baslik": "İlk",
+          "metin": "Sürecin uzunluğunu ve derinliğini şimdiye taşıyan o perde, fotoğraf makinelerinin ve analog filmlerin birbirine yaptığı yolculuğun soyut bugünü. Aslında bugün burada ve daha öncesinde rastladığımız fotoğrafların oluşumu ilk’i ile aynı. Estetik olarak devinimi olan sürecin başı ve bugünü… Analog, his olarak bu tanımın fikrine ışık veriyor. Eylemi gerçekleştirirken mekânsal olarak zamandan kopmuşluk hissini yaratan ağır metal analog fotoğraf makineleri ve farklı ışık perdeleri giymiş analog filmler."
+        },
+        {
+          "baslik": "An ve anı",
+          "metin": "Zaman ve mekân kayıt altına alınmaya başlandı. Eylemin vermiş olduğu analog duygu ve sürecin başlattığı sona olan merak. Hisler, insanlar, nesneler, hareketler, renkler, düzen, düzensizlik, an ve anılar… Kadrajın içine dahil etmek istediğimiz her şey, bizden (senden) çok şey içermekte. Acele etmekten uzaklaştığımız, farkındalık yaratan özel an dizilimi."
+        },
+        {
+          "baslik": "Büyü",
+          "metin": "Makinemizde karelerini tamamlayan analog filmimizi saniyelerle sınırlandırıp, filmimizin ışıktan arınarak gün yüzüne çıktığı büyülü süreç. Titizlikle yıkanan filmimiz artık gözle görülebilir kareye dönüşür. Ardından her bir karemiz, doğru ışık süreleriyle fotoğraf kartlarımızın üzerine işlenir. Her bir kare çekildiği zaman(sen) olan anı beklerken, şimdi de doğru ışığı beklemekte. Kartlarımızın üzerine düşen ışığın orada saklanabilmesi için kimyasal banyolarda titiz bir emek içerir. Baştan sona analog oluşturduğumuz o zamansızlık."
+        },
+        {
+          "baslik": "Son",
+          "metin": "Şimdi burada, aramızda ve tam karşımızda… Bir zamansızlığın mekana taşındığı an. Farklılıkların oluşturduğu analog düzende gezmekteyiz. Her biri zamanın bir ışığından kopup bugün burada çerçevesine kavuştu. İlk’in son’u başlattığı, sizlere somut olarak sunduğumuz analog fotoğrafçılığın ve emeğin kaydı. Her bir kare için iyi yolculuklar dileriz, keyifli sergiler."
+        }
+      ],
+      "katilimcilar": [
+        "Abdulsamet Yavuz",
+        "Azra Şakar",
+        "Ceren Kılıçkan",
+        "Destina Lena Yıldız",
+        "Dilem Kaya",
+        "Eda Küçük",
+        "Esra Menek",
+        "Hüseyin Çolak",
+        "Kevser Sıla Demir",
+        "Leyla Sena Güven",
+        "Narin Tarın",
+        "Nilüfer Karadeniz",
+        "Ömer Faruk Mahmutlar",
+        "Rezan Dinler",
+        "Sena Çırakoğlu",
+        "Sercan Yıldırım",
+        "Sinem İlgi Tuzlu",
+        "Yaren Arık"
+      ],
+      "eserler": [
+        {
+          "foto": "/images/sergiler/analog/eserler/01.webp",
+          "fotografci": "Abdulsamet Yavuz"
+        },
+        {
+          "foto": "/images/sergiler/analog/eserler/02.webp",
+          "fotografci": "Abdulsamet Yavuz"
+        },
+        {
+          "foto": "/images/sergiler/analog/eserler/03.webp",
+          "fotografci": "Azra Şakar"
+        },
+        {
+          "foto": "/images/sergiler/analog/eserler/04.webp",
+          "fotografci": "Azra Şakar"
+        },
+        {
+          "foto": "/images/sergiler/analog/eserler/05.webp",
+          "fotografci": "Ceren Kılıçkan"
+        },
+        {
+          "foto": "/images/sergiler/analog/eserler/06.webp",
+          "fotografci": "Destina Lena Yıldız"
+        },
+        {
+          "foto": "/images/sergiler/analog/eserler/07.webp",
+          "fotografci": "Destina Lena Yıldız"
+        },
+        {
+          "foto": "/images/sergiler/analog/eserler/08.webp",
+          "fotografci": "Dilem Kaya"
+        },
+        {
+          "foto": "/images/sergiler/analog/eserler/09.webp",
+          "fotografci": "Dilem Kaya"
+        },
+        {
+          "foto": "/images/sergiler/analog/eserler/10.webp",
+          "fotografci": "Eda Küçük"
+        },
+        {
+          "foto": "/images/sergiler/analog/eserler/11.webp",
+          "fotografci": "Eda Küçük"
+        },
+        {
+          "foto": "/images/sergiler/analog/eserler/12.webp",
+          "fotografci": "Esra Menek"
+        },
+        {
+          "foto": "/images/sergiler/analog/eserler/13.webp",
+          "fotografci": "Hüseyin Çolak"
+        },
+        {
+          "foto": "/images/sergiler/analog/eserler/14.webp",
+          "fotografci": "Kevser Sıla Demir"
+        },
+        {
+          "foto": "/images/sergiler/analog/eserler/15.webp",
+          "fotografci": "Kevser Sıla Demir"
+        },
+        {
+          "foto": "/images/sergiler/analog/eserler/16.webp",
+          "fotografci": "Leyla Sena Güven"
+        },
+        {
+          "foto": "/images/sergiler/analog/eserler/17.webp",
+          "fotografci": "Narin Tarın"
+        },
+        {
+          "foto": "/images/sergiler/analog/eserler/18.webp",
+          "fotografci": "Nilüfer Karadeniz"
+        },
+        {
+          "foto": "/images/sergiler/analog/eserler/19.webp",
+          "fotografci": "Nilüfer Karadeniz"
+        },
+        {
+          "foto": "/images/sergiler/analog/eserler/20.webp",
+          "fotografci": "Ömer Faruk Mahmutlar"
+        },
+        {
+          "foto": "/images/sergiler/analog/eserler/21.webp",
+          "fotografci": "Ömer Faruk Mahmutlar"
+        },
+        {
+          "foto": "/images/sergiler/analog/eserler/22.webp",
+          "fotografci": "Rezan Dinler"
+        },
+        {
+          "foto": "/images/sergiler/analog/eserler/23.webp",
+          "fotografci": "Sena Çırakoğlu"
+        },
+        {
+          "foto": "/images/sergiler/analog/eserler/24.webp",
+          "fotografci": "Sercan Yıldırım"
+        },
+        {
+          "foto": "/images/sergiler/analog/eserler/25.webp",
+          "fotografci": "Sercan Yıldırım"
+        },
+        {
+          "foto": "/images/sergiler/analog/eserler/26.webp",
+          "fotografci": "Sinem İlgi Tuzlu"
+        },
+        {
+          "foto": "/images/sergiler/analog/eserler/27.webp",
+          "fotografci": "Yaren Arık"
+        },
+        {
+          "foto": "/images/sergiler/analog/eserler/28.webp",
+          "fotografci": "Yaren Arık"
+        }
+      ],
+      "acilis": [
+        "/images/sergiler/analog/acilis/01.webp",
+        "/images/sergiler/analog/acilis/02.webp",
+        "/images/sergiler/analog/acilis/03.webp",
+        "/images/sergiler/analog/acilis/04.webp",
+        "/images/sergiler/analog/acilis/05.webp",
+        "/images/sergiler/analog/acilis/06.webp",
+        "/images/sergiler/analog/acilis/07.webp",
+        "/images/sergiler/analog/acilis/08.webp"
+      ]
+    },
+    {
+      "ad": "4=1",
+      "yil": "2024",
+      "tarih_yer": "25 Nisan – 23 Mayıs 2024 · Prof. Dr. Yusuf Vardar MÖTBE Kültür Merkezi",
+      "afis": "/images/sergiler/4-1/afis.webp",
+      "ayrac_on": "/images/sergiler/4-1/ayrac-on.webp",
+      "ayrac_arka": "/images/sergiler/4-1/ayrac-arka.webp",
+      "yazi": [
+        {
+          "baslik": "Renk",
+          "metin": "Tabiatın veya nesnelerin yansımasıyla gözde meydana gelen algısal deneyim. Işığa bağ(ım)lı ruhumuzun, sanatımızın ışıktan beslenen somut ifadesi. Güneşin aydınlattığı benliğimizin, insanların zihninde yer edinmiş renk aralığındayız. Belki hepimiz aynı renkteyiz; ayrımı kuran sınırlar, duvarlar, insanlar… Fotoğraf karesinin gözümüze yansıttığı, algıladıklarımız ise fotoğrafçının benliğinin güneş görevi gördüğü noktada bize duyumsatmak ve özümsetmek istediği renkler. Bizim o karede görebildiğimiz renk pigmentleri de kendi benliğimizin güneşinde yıkanan içselleştirdiklerimizin birer yansıması."
+        },
+        {
+          "baslik": "Işık",
+          "metin": "Fotoğrafın doğuşunun rakipsiz yaratıcısı olan ışık, kaynağından doğduktan sonra bir engelle karşılaşmadığı sürece her yöne yayılabilir. Dünyaya, sokağımıza, zihnimize ulaşır. Vizörden gördüğümüz kareyi, renkleri(mizi) görünür kılar. Bazense o karede görünmesini istemediklerimizin, gizlerimizin, utanç ve korkularımızın üzerine süzülmesiyle bile onları iliklerine kadar aydınlatır. Karşısına bir engel çıktığında yanı başında gölge kendini gösterir. Gölge, fotoğraf karesinin karanlık nesnesi olmayı seçmesinin yanında saklamak istediklerimiz için görünmezlik pelerini rolünü üstlenir. Fotoğrafçı ışığını; ressamın tuvalinde fırçayı gezdirişi gibi kullanarak havada şekiller çizebilir ve onunla oynadığı oyunlar, fotoğraf karesinin içinde barındırdığı anlatıların dışavurumudur."
+        },
+        {
+          "baslik": "İmge",
+          "metin": "Işık vasıtasıyla insan gözünde yapı oluşturmanın ve bu döngünün anlam duvarı. Fotoğraflarımızın özgünleşmesinde, duyguların iletilmesinde veya bir fikrin ifade edilmesinde önemli rol alır. Alıcıyı harekete geçiren güçlü bir ifade olup derin anlatılar besler. İmgeler bizim benliğimizdeki ipuçlarıdır. Fotoğrafı bir bağlam olarak konumlandırdığımızda durduğumuz noktalar ve harekete geçtiğimiz anları ifade eder. Ve insan burada farklılaşır, bağlamı özgünleşir ve özgürleşir. Fotoğrafımızda barınan imgelerden bize çıkan yol, aslında bizden başlar."
+        },
+        {
+          "baslik": "Çerçeve",
+          "metin": "Uzun bir ışık yolculuğunun sonunda izlediğimiz o taze film; birbirlerine bağlanarak uzanan o renklerin, düzenin, eğimlerin ve imgelerin sunumu. Sınırları çizmek, düzeni belirlemek ve konuyu yansıtmak için oluşturulan katmanları sınırladığımız son an. Artık fotoğrafın oluşması için gereken son bir harekete gidilen uzun yol. Güzel olan tarafı hepimiz için göreceli ve boyutsal olmasıdır. Oluşturduğumuz bu yolculuk bizlerin kendini farklı bir iletişimin içinde var ediyor. İnsan mekanı ve zamanı sınırladığında kendine bir köşe edinmiş olarak buluyor. Ve biz gibi ışığın kendisini gösterdiği ilk andan itibaren bozulan yayılımını tekrar soyut ve somut olarak sınırladığı alana ulaşma serüveni sonuçlanmış oluyor. O anı sadece durdurmakla değil birbiri ardına gelen ışık, renk, imge ve çerçeve diziniminin nihai anlamı FOTOĞRAF…"
+        }
+      ],
+      "katilimcilar": [
+        "Ahmet Enes Öner",
+        "Ali Yıldırım",
+        "Beril Acar",
+        "Bilge Kişisi",
+        "Burak Taha Pekşen",
+        "Ceren Kılıçkan",
+        "Destina Lena Yıldız",
+        "Dilem Kaya",
+        "Ebrar Ulus",
+        "Enes Burak Yavuz",
+        "Faki Aydın",
+        "Feyza Beyazıt",
+        "Kevser Sıla Demir",
+        "Nilüfer Karadeniz",
+        "Ömer Faruk Mahmutlar",
+        "Öykü Erdal",
+        "Rezan Dinler",
+        "Sarp Tunal",
+        "Sena Akça",
+        "Sude Dercan",
+        "Sude Melek Çapalov",
+        "Taha Tolga Aksoy",
+        "Ufuk Köksal"
+      ],
+      "eserler": [
+        {
+          "foto": "/images/sergiler/4-1/eserler/01.webp",
+          "fotografci": "Ahmet Enes Öner"
+        },
+        {
+          "foto": "/images/sergiler/4-1/eserler/02.webp",
+          "fotografci": "Ali Yıldırım"
+        },
+        {
+          "foto": "/images/sergiler/4-1/eserler/03.webp",
+          "fotografci": "Beril Acar"
+        },
+        {
+          "foto": "/images/sergiler/4-1/eserler/04.webp",
+          "fotografci": "Bilge Kişisi"
+        },
+        {
+          "foto": "/images/sergiler/4-1/eserler/05.webp",
+          "fotografci": "Burak Taha Pekşen"
+        },
+        {
+          "foto": "/images/sergiler/4-1/eserler/06.webp",
+          "fotografci": "Ceren Kılıçkan"
+        },
+        {
+          "foto": "/images/sergiler/4-1/eserler/07.webp",
+          "fotografci": "Destina Lena Yıldız"
+        },
+        {
+          "foto": "/images/sergiler/4-1/eserler/08.webp",
+          "fotografci": "Dilem Kaya"
+        },
+        {
+          "foto": "/images/sergiler/4-1/eserler/09.webp",
+          "fotografci": "Dilem Kaya"
+        },
+        {
+          "foto": "/images/sergiler/4-1/eserler/10.webp",
+          "fotografci": "Ebrar Ulus"
+        },
+        {
+          "foto": "/images/sergiler/4-1/eserler/11.webp",
+          "fotografci": "Enes Burak Yavuz"
+        },
+        {
+          "foto": "/images/sergiler/4-1/eserler/12.webp",
+          "fotografci": "Faki Aydın"
+        },
+        {
+          "foto": "/images/sergiler/4-1/eserler/13.webp",
+          "fotografci": "Feyza Beyazıt"
+        },
+        {
+          "foto": "/images/sergiler/4-1/eserler/14.webp",
+          "fotografci": "Kevser Sıla Demir"
+        },
+        {
+          "foto": "/images/sergiler/4-1/eserler/15.webp",
+          "fotografci": "Nilüfer Karadeniz"
+        },
+        {
+          "foto": "/images/sergiler/4-1/eserler/16.webp",
+          "fotografci": "Ömer Faruk Mahmutlar"
+        },
+        {
+          "foto": "/images/sergiler/4-1/eserler/17.webp",
+          "fotografci": "Ömer Faruk Mahmutlar"
+        },
+        {
+          "foto": "/images/sergiler/4-1/eserler/18.webp",
+          "fotografci": "Öykü Erdal"
+        },
+        {
+          "foto": "/images/sergiler/4-1/eserler/19.webp",
+          "fotografci": "Rezan Dinler"
+        },
+        {
+          "foto": "/images/sergiler/4-1/eserler/20.webp",
+          "fotografci": "Rezan Dinler"
+        },
+        {
+          "foto": "/images/sergiler/4-1/eserler/21.webp",
+          "fotografci": "Sarp Tunal"
+        },
+        {
+          "foto": "/images/sergiler/4-1/eserler/22.webp",
+          "fotografci": "Sena Akça"
+        },
+        {
+          "foto": "/images/sergiler/4-1/eserler/23.webp",
+          "fotografci": "Sude Dercan"
+        },
+        {
+          "foto": "/images/sergiler/4-1/eserler/24.webp",
+          "fotografci": "Sude Melek Çapalov"
+        },
+        {
+          "foto": "/images/sergiler/4-1/eserler/25.webp",
+          "fotografci": "Taha Tolga Aksoy"
+        },
+        {
+          "foto": "/images/sergiler/4-1/eserler/26.webp",
+          "fotografci": "Ufuk Köksal"
+        }
+      ],
+      "acilis": []
+    },
+    {
+      "ad": "Tezat",
+      "yil": "2022-2023",
+      "tarih_yer": "19 Aralık 2022 · Prof. Dr. Yusuf Vardar MÖTBE Kültür Merkezi",
+      "afis": "/images/sergiler/tezat/afis.webp",
+      "ayrac_on": "",
+      "ayrac_arka": "",
+      "yazi": [],
+      "katilimcilar": [
+        "Ahmet Enes Öner",
+        "Alparslan Cebecioğlu",
+        "Atilla Reşat Güney",
+        "Ayşe Sude Yılmazer",
+        "Burak Taha Pekşen",
+        "Ceren Kılıçkan",
+        "Ebrar Ulus",
+        "Eren Duru",
+        "Gizem Güven",
+        "Hüseyin Çolak",
+        "İlayda Apa",
+        "İsmail Akçay",
+        "Leyla Sena Güven",
+        "Merve Nur Körpe",
+        "Nilüfer Karadeniz",
+        "Oğuzhan Günal",
+        "Rezan Dinler",
+        "Simge Tan",
+        "Sinem Durmaz",
+        "Sude Melek Çapalov",
+        "Taha Kahraman",
+        "Teslime Altınok",
+        "Yasin Boğa",
+        "Yılmaz Yürekli"
+      ],
+      "eserler": [
+        {
+          "foto": "/images/sergiler/tezat/eserler/01.webp",
+          "fotografci": "Ahmet Enes Öner"
+        },
+        {
+          "foto": "/images/sergiler/tezat/eserler/02.webp",
+          "fotografci": "Alparslan Cebecioğlu"
+        },
+        {
+          "foto": "/images/sergiler/tezat/eserler/03.webp",
+          "fotografci": "Alparslan Cebecioğlu"
+        },
+        {
+          "foto": "/images/sergiler/tezat/eserler/04.webp",
+          "fotografci": "Atilla Reşat Güney & Yasin Boğa"
+        },
+        {
+          "foto": "/images/sergiler/tezat/eserler/05.webp",
+          "fotografci": "Ayşe Sude Yılmazer"
+        },
+        {
+          "foto": "/images/sergiler/tezat/eserler/06.webp",
+          "fotografci": "Burak Taha Pekşen"
+        },
+        {
+          "foto": "/images/sergiler/tezat/eserler/07.webp",
+          "fotografci": "Burak Taha Pekşen"
+        },
+        {
+          "foto": "/images/sergiler/tezat/eserler/08.webp",
+          "fotografci": "Burak Taha Pekşen"
+        },
+        {
+          "foto": "/images/sergiler/tezat/eserler/09.webp",
+          "fotografci": "Ceren Kılıçkan"
+        },
+        {
+          "foto": "/images/sergiler/tezat/eserler/10.webp",
+          "fotografci": "Ceren Kılıçkan"
+        },
+        {
+          "foto": "/images/sergiler/tezat/eserler/11.webp",
+          "fotografci": "Ebrar Ulus"
+        },
+        {
+          "foto": "/images/sergiler/tezat/eserler/12.webp",
+          "fotografci": "Eren Duru"
+        },
+        {
+          "foto": "/images/sergiler/tezat/eserler/13.webp",
+          "fotografci": "Gizem Güven"
+        },
+        {
+          "foto": "/images/sergiler/tezat/eserler/14.webp",
+          "fotografci": "Hüseyin Çolak"
+        },
+        {
+          "foto": "/images/sergiler/tezat/eserler/15.webp",
+          "fotografci": "İlayda Apa"
+        },
+        {
+          "foto": "/images/sergiler/tezat/eserler/16.webp",
+          "fotografci": "İsmail Akçay"
+        },
+        {
+          "foto": "/images/sergiler/tezat/eserler/17.webp",
+          "fotografci": "Leyla Sena Güven"
+        },
+        {
+          "foto": "/images/sergiler/tezat/eserler/18.webp",
+          "fotografci": "Merve Nur Körpe"
+        },
+        {
+          "foto": "/images/sergiler/tezat/eserler/19.webp",
+          "fotografci": "Nilüfer Karadeniz"
+        },
+        {
+          "foto": "/images/sergiler/tezat/eserler/20.webp",
+          "fotografci": "Oğuzhan Günal"
+        },
+        {
+          "foto": "/images/sergiler/tezat/eserler/21.webp",
+          "fotografci": "Rezan Dinler"
+        },
+        {
+          "foto": "/images/sergiler/tezat/eserler/22.webp",
+          "fotografci": "Rezan Dinler"
+        },
+        {
+          "foto": "/images/sergiler/tezat/eserler/23.webp",
+          "fotografci": "Simge Tan"
+        },
+        {
+          "foto": "/images/sergiler/tezat/eserler/24.webp",
+          "fotografci": "Sinem Durmaz"
+        },
+        {
+          "foto": "/images/sergiler/tezat/eserler/25.webp",
+          "fotografci": "Sude Melek Çapalov"
+        },
+        {
+          "foto": "/images/sergiler/tezat/eserler/26.webp",
+          "fotografci": "Taha Kahraman"
+        },
+        {
+          "foto": "/images/sergiler/tezat/eserler/27.webp",
+          "fotografci": "Teslime Altınok"
+        },
+        {
+          "foto": "/images/sergiler/tezat/eserler/28.webp",
+          "fotografci": "Yılmaz Yürekli"
+        }
+      ],
+      "acilis": []
+    }
+  ]
+}

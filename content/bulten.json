@@ -1,0 +1,28 @@
+{
+  "sayilar": [
+    {
+      "tarih": "Eylül 2026",
+      "baslik": "Ege Fotoğraf Bülten — Eylül Sayısı",
+      "editorler": "[İsim Soyisim], [İsim Soyisim]",
+      "katkida_bulunanlar": "[İsim Soyisim], [İsim Soyisim], [İsim Soyisim]",
+      "ozet": "[Bu sayıda: bu ay çektiğimiz kareler, kısa bir deneme ve üyelerimizin portfolyosundan seçmeler. Kendi özetinizle değiştirin.]",
+      "link": "#"
+    },
+    {
+      "tarih": "Ağustos 2026",
+      "baslik": "Ege Fotoğraf Bülten — Ağustos Sayısı",
+      "editorler": "[İsim Soyisim]",
+      "katkida_bulunanlar": "[İsim Soyisim], [İsim Soyisim]",
+      "ozet": "[Örnek özet — bu ayki gezi, karanlık oda notları ve bir söyleşi. Kendi içeriğinizle değiştirin.]",
+      "link": "#"
+    },
+    {
+      "tarih": "Temmuz 2026",
+      "baslik": "Ege Fotoğraf Bülten — Temmuz Sayısı",
+      "editorler": "[İsim Soyisim], [İsim Soyisim]",
+      "katkida_bulunanlar": "[İsim Soyisim]",
+      "ozet": "[Örnek özet — yaz dönemi etkinlik değerlendirmesi ve bir portfolyo incelemesi. Kendi içeriğinizle değiştirin.]",
+      "link": "#"
+    }
+  ]
+}

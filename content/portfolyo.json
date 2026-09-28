@@ -1,0 +1,80 @@
+{
+  "uyeler": [
+    {
+      "ad": "Ömer",
+      "fotograflar": [
+        "/images/portfolyo/omer/01.webp",
+        "/images/portfolyo/omer/02.webp",
+        "/images/portfolyo/omer/03.webp",
+        "/images/portfolyo/omer/04.webp",
+        "/images/portfolyo/omer/05.webp",
+        "/images/portfolyo/omer/06.webp",
+        "/images/portfolyo/omer/07.webp",
+        "/images/portfolyo/omer/08.webp",
+        "/images/portfolyo/omer/09.webp",
+        "/images/portfolyo/omer/10.jpg",
+        "/images/portfolyo/omer/11.webp",
+        "/images/portfolyo/omer/12.webp",
+        "/images/portfolyo/omer/13.webp",
+        "/images/portfolyo/omer/14.webp",
+        "/images/portfolyo/omer/15.jpg"
+      ]
+    },
+    {
+      "ad": "Samet",
+      "fotograflar": []
+    },
+    {
+      "ad": "Rezan",
+      "fotograflar": []
+    },
+    {
+      "ad": "Elif",
+      "fotograflar": []
+    },
+    {
+      "ad": "Deniz",
+      "fotograflar": []
+    },
+    {
+      "ad": "Cem",
+      "fotograflar": []
+    },
+    {
+      "ad": "Aslı",
+      "fotograflar": []
+    },
+    {
+      "ad": "Kerem",
+      "fotograflar": []
+    },
+    {
+      "ad": "Ece",
+      "fotograflar": []
+    },
+    {
+      "ad": "Burak",
+      "fotograflar": []
+    },
+    {
+      "ad": "Zeynep",
+      "fotograflar": []
+    },
+    {
+      "ad": "Mert",
+      "fotograflar": []
+    },
+    {
+      "ad": "İpek",
+      "fotograflar": []
+    },
+    {
+      "ad": "Barış",
+      "fotograflar": []
+    },
+    {
+      "ad": "Selin",
+      "fotograflar": []
+    }
+  ]
+}
