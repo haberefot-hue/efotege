@@ -5,7 +5,7 @@
 # ─────────────────────────────────────────────────────────────
 backend:
   name: github
-  repo: GITHUB-KULLANICI-ADI/efot-site   # ← örn. efotege/efot-site
+  repo: haberefot-hue/efotege
   branch: main
   commit_messages:
     update: "{{collection}} güncellendi"
